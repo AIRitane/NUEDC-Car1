@@ -52,7 +52,7 @@
           <OutputName>Car1</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
-          <CreateHexFile>0</CreateHexFile>
+          <CreateHexFile>1</CreateHexFile>
           <DebugInformation>1</DebugInformation>
           <BrowseInformation>1</BrowseInformation>
           <ListingPath>.\</ListingPath>
@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>__MSP432P401R__,__TARGET_FPU_VFP,__FPU_PRESENT,ARM_MATH_CM4</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\hardware\inc;..\..\sys\inc;..\..\msp432p4xx_lib;..\..\msp432p4xx_lib\CMSIS\Include;..\..\bsp;..\..\application</IncludePath>
+              <IncludePath>..\..\hardware\inc;..\..\sys\inc;..\..\msp432p4xx_lib;..\..\msp432p4xx_lib\CMSIS\Include;..\..\bsp;..\..\application;..\..\algorithm</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -507,6 +507,16 @@
               <FileName>fsm.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\application\fsm.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>algorithm</GroupName>
+          <Files>
+            <File>
+              <FileName>pid.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\algorithm\pid.c</FilePath>
             </File>
           </Files>
         </Group>

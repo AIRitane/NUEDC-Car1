@@ -51,3 +51,6 @@
 .\build\main.o: ..\..\bsp\motor.h
 .\build\main.o: ..\..\hardware\inc\key.h
 .\build\main.o: ..\..\application\fsm.h
+.\build\main.o: ..\..\application\follow_line.h
+.\build\main.o: ..\..\algorithm\pid.h
+.\build\main.o: ..\..\algorithm\struct_typedef.h

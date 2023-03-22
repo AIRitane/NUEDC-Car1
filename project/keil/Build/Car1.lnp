@@ -19,6 +19,7 @@
 ".\build\motor.o"
 ".\build\follow_line.o"
 ".\build\fsm.o"
+".\build\pid.o"
 --strict --scatter ".\Build\Car1.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

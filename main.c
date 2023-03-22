@@ -17,10 +17,10 @@
 #include "motor.h"
 #include "key.h"
 #include "fsm.h"
+#include "follow_line.h"
 
 uint8_t infrared = 0;
-int32_t set_speed[2] = {500,800};
-const motor_t * motor_info = NULL;
+int32_t set_speed[2] = {1000,1000};
 int main(void)
 {
     SysInit();         // 第3讲 时钟配置
@@ -28,22 +28,33 @@ int main(void)
     delay_init();      // 第4讲 滴答延时
 
     /*开始填充初始化代码*/
-		motor_init();
 		KEY_Init(1);//开中断
-	LED_Init();
-		motor_info = get_motor_info();
+		LED_Init();
+		fsm_init();
     /*停止填充初始化代码*/
-		//motor_set_speed(set_speed);
 		
     printf("Hello,MSP432!\r\n");
     MAP_Interrupt_enableMaster(); // 开启总中断
+		motor_set_speed(set_speed);
     while (1)
     {
-			infrared = infrared_sensor_read();
-			printf("speed = %d %d\tturns = %d %d\tdistance = %d %d\n",
-						motor_info->speed[0],motor_info->speed[1],motor_info->turns[0],motor_info->turns[1],motor_info->distance[0],motor_info->distance[1]);
-			delay_ms(100);
+			fsm_loop();
+			
+			delay_ms(1);
+//			set_speed[0] = 0;
+//			set_speed[1] = 0;
+//			motor_set_speed(set_speed);
     }
+}
+
+
+//函数功能：延时
+void key_delay(uint16_t t)
+{
+    volatile uint16_t x;
+    while (t--)
+        for (x = 0; x < 1000; x++)
+            ;
 }
 
 void PORT1_IRQHandler(void)
@@ -72,6 +83,7 @@ void PORT1_IRQHandler(void)
         {
             /*开始填充用户代码*/
 						press_count = 0;
+						LED_Show_Staus(car.mode);
             /*结束填充用户代码*/
         }
     }

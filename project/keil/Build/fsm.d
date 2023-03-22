@@ -43,3 +43,6 @@
 .\build\fsm.o: ..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/wdt_a.h
 .\build\fsm.o: ..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/sysctl.h
 .\build\fsm.o: ..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/flash.h
+.\build\fsm.o: ..\..\application\follow_line.h
+.\build\fsm.o: ..\..\algorithm\pid.h
+.\build\fsm.o: ..\..\algorithm\struct_typedef.h

@@ -3,6 +3,7 @@
 
 #include <stdint.h>
 #include "motor.h"
+#include "follow_line.h"
 
 typedef enum
 {
@@ -25,12 +26,15 @@ typedef struct
 {
 	mode_e mode;
 	motor_status_e motor_status;
-	const motor_t motor_info;
+	const motor_t *motor_info;
+	const follow_line_t* follow_line_info;
+	
+	int32_t set_pwm[2];
 }car_t;
 
 extern car_t car;
 
-void fsm_init();
-void fsm_loop();
+void fsm_init(void);
+void fsm_loop(void);
 
 #endif

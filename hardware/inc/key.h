@@ -18,6 +18,5 @@
 
 void KEY_Init(bool mode);    //IO初始化
 uint8_t KEY_Scan(bool mode); //按键扫描函数
-void key_delay(uint16_t t);
 
 #endif

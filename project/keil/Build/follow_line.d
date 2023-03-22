@@ -1,9 +1,11 @@
 .\build\follow_line.o: ..\..\application\follow_line.c
 .\build\follow_line.o: ..\..\application\follow_line.h
+.\build\follow_line.o: A:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\build\follow_line.o: ..\..\algorithm\pid.h
+.\build\follow_line.o: ..\..\algorithm\struct_typedef.h
 .\build\follow_line.o: ..\..\bsp\motor.h
 .\build\follow_line.o: ..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/driverlib.h
 .\build\follow_line.o: ..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/adc14.h
-.\build\follow_line.o: A:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\build\follow_line.o: A:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\build\follow_line.o: ..\..\msp432p4xx_lib\ti/devices/msp432p4xx/inc/msp.h
 .\build\follow_line.o: ..\..\msp432p4xx_lib\ti/devices/msp432p4xx/inc/msp432p401r.h
@@ -43,3 +45,4 @@
 .\build\follow_line.o: ..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/wdt_a.h
 .\build\follow_line.o: ..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/sysctl.h
 .\build\follow_line.o: ..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/flash.h
+.\build\follow_line.o: ..\..\bsp\infrared_led.h

@@ -6,10 +6,12 @@ motor_t motor;
 #define ABS(x) ((x)>=0?(x):-(x))
 
 //PWM设置为1KHz 占空比0-1000可调
+#define PI 3.1415926535
 #define MOTOR_PSC	48				//电机PWM预分频
 #define MOTOR_CCR0	1000		//电机PWM重装载计数值
-#define MOTOR_PERIMETER  1	//轮子周长
-#define CYCLE_TURNS 10			//单位圈数内编码器的脉冲数量
+#define MOTOR_PERIMETER  (6.8*PI)	//轮子周长
+#define MOTOR_RADIUS			3.4 
+#define CYCLE_TURNS 360			//单位圈数内编码器的脉冲数量
 #define TA2_FREQ	100				//测频法频率
 
 static void coder_init(void);
@@ -69,8 +71,8 @@ void TA2_0_IRQHandler(void)
 	MAP_Timer_A_clearCaptureCompareInterrupt(TIMER_A2_BASE, TIMER_A_CAPTURECOMPARE_REGISTER_0);
 	BITBAND_PERI(TIMER_A_CMSIS(TIMER_A2_BASE)->CCTL[0], TIMER_A_CCTLN_COV_OFS) = 0;
 	
-	motor.speed[0] = (motor.turns[0] - pre_turns[0])*TA2_FREQ/CYCLE_TURNS;
-	motor.speed[1] = (motor.turns[1] - pre_turns[1])*TA2_FREQ/CYCLE_TURNS;
+	motor.speed[0] = (motor.turns[0] - pre_turns[0])*TA2_FREQ*MOTOR_RADIUS/CYCLE_TURNS;
+	motor.speed[1] = (motor.turns[1] - pre_turns[1])*TA2_FREQ*MOTOR_RADIUS/CYCLE_TURNS;
 	
 	pre_turns[0] = motor.turns[0];
 	pre_turns[1] = motor.turns[1];

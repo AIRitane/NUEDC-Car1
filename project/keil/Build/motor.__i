@@ -1,4 +1,4 @@
---c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\..\hardware\inc -I ..\..\sys\inc -I ..\..\msp432p4xx_lib -I ..\..\msp432p4xx_lib\CMSIS\Include -I ..\..\bsp -I ..\..\application
+--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\..\hardware\inc -I ..\..\sys\inc -I ..\..\msp432p4xx_lib -I ..\..\msp432p4xx_lib\CMSIS\Include -I ..\..\bsp -I ..\..\application -I ..\..\algorithm
 -I.\RTE\_Car1
 -IA:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
 -IA:\Keil_v5\Packs\TexasInstruments\MSP432\1.0.0\Device\Include

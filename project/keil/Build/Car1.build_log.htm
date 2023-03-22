@@ -31,15 +31,11 @@ Rebuild target 'Car1'
 compiling system_msp432p401r.c...
 assembling startup_msp432p401r_uvision.s...
 compiling main.c...
-..\..\application\fsm.h(33): warning:  #1295-D: Deprecated declaration fsm_init - give arg types
-  void fsm_init();
-..\..\application\fsm.h(34): warning:  #1295-D: Deprecated declaration fsm_loop - give arg types
-  void fsm_loop();
-..\..\main.c(64): warning:  #188-D: enumerated type mixed with another type
+..\..\main.c(75): warning:  #188-D: enumerated type mixed with another type
                                                 car.mode = press_count%6;
-..\..\main.c(78): warning:  #1-D: last line of file ends without a newline
+..\..\main.c(90): warning:  #1-D: last line of file ends without a newline
   }
-..\..\main.c: 4 warnings, 0 errors
+..\..\main.c: 2 warnings, 0 errors
 compiling adc.c...
 compiling key.c...
 compiling key4x4.c...
@@ -54,36 +50,27 @@ compiling baudrate_calculate.c...
 compiling infrared_led.c...
 compiling motor.c...
 compiling follow_line.c...
+..\..\application\follow_line.c(67): warning:  #1-D: last line of file ends without a newline
+  }
+..\..\application\follow_line.c: 1 warning, 0 errors
 compiling fsm.c...
-..\..\application\fsm.h(33): warning:  #1295-D: Deprecated declaration fsm_init - give arg types
-  void fsm_init();
-..\..\application\fsm.h(34): warning:  #1295-D: Deprecated declaration fsm_loop - give arg types
-  void fsm_loop();
 ..\..\application\fsm.c(3): warning:  #1295-D: Deprecated declaration fsm_set_mode - give arg types
   static void fsm_set_mode();
 ..\..\application\fsm.c(4): warning:  #1295-D: Deprecated declaration fsm_set_speed - give arg types
   static void fsm_set_speed();
 ..\..\application\fsm.c(5): warning:  #1295-D: Deprecated declaration fsm_data_loop - give arg types
   static void fsm_data_loop();
-..\..\application\fsm.c(7): warning:  #1295-D: Deprecated declaration fsm_init - give arg types
-  void fsm_init();
-..\..\application\fsm.c(8): warning:  #1295-D: Deprecated declaration fsm_loop - give arg types
-  void fsm_loop();
-..\..\application\fsm.c(10): warning:  #1-D: last line of file ends without a newline
-  car_t car;
 ..\..\application\fsm.c(3): warning:  #177-D: function "fsm_set_mode"  was declared but never referenced
   static void fsm_set_mode();
-..\..\application\fsm.c(4): warning:  #177-D: function "fsm_set_speed"  was declared but never referenced
-  static void fsm_set_speed();
 ..\..\application\fsm.c(5): warning:  #177-D: function "fsm_data_loop"  was declared but never referenced
   static void fsm_data_loop();
-..\..\application\fsm.c: 11 warnings, 0 errors
+..\..\application\fsm.c: 5 warnings, 0 errors
+compiling pid.c...
 linking...
-.\Build\Car1.axf: Error: L6218E: Undefined symbol key_delay (referred from main.o).
-Not enough information to list image symbols.
-Not enough information to list load addresses in the image map.
-Finished: 2 information, 0 warning and 1 error messages.
-".\Build\Car1.axf" - 1 Error(s), 15 Warning(s).
+Program Size: Code=8628 RO-data=512 RW-data=72 ZI-data=840  
+FromELF: creating hex file...
+After Build - User command #1: fromelf --bin --output .\Build\my_project_ROM.bin .\Build\Car1.axf
+".\Build\Car1.axf" - 0 Error(s), 8 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -106,8 +93,7 @@ Package Vendor: TexasInstruments
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.4.0
-Target not created.
-Build Time Elapsed:  00:00:18
+Build Time Elapsed:  00:00:11
 </pre>
 </body>
 </html>
