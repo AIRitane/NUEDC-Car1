@@ -1,0 +1,113 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.33.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 1 1, 1, LIC=LJWP0-B55ZH-8YMVV-PXEJW-AFN8L-53ICB
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.33.0.0
+Toolchain Path:  A:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.33.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      CMSIS_AGDI.dll V1.32.12.0
+Dialog DLL:      TCM.DLL V1.48.0.0
+ 
+<h2>Project:</h2>
+C:\Users\Lixin\Desktop\Car1\project\keil\Car1.uvprojx
+Project File Date:  03/22/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'A:\Keil_v5\ARM\ARMCC\Bin'
+*** Note: Rebuilding project, since 'Options->Output->Create Batch File' is selected.
+Rebuild target 'Car1'
+compiling system_msp432p401r.c...
+assembling startup_msp432p401r_uvision.s...
+compiling main.c...
+..\..\application\fsm.h(33): warning:  #1295-D: Deprecated declaration fsm_init - give arg types
+  void fsm_init();
+..\..\application\fsm.h(34): warning:  #1295-D: Deprecated declaration fsm_loop - give arg types
+  void fsm_loop();
+..\..\main.c(64): warning:  #188-D: enumerated type mixed with another type
+                                                car.mode = press_count%6;
+..\..\main.c(78): warning:  #1-D: last line of file ends without a newline
+  }
+..\..\main.c: 4 warnings, 0 errors
+compiling adc.c...
+compiling key.c...
+compiling key4x4.c...
+compiling led.c...
+compiling oled.c...
+compiling tim32.c...
+compiling timA.c...
+compiling usart.c...
+compiling sysinit.c...
+compiling delay.c...
+compiling baudrate_calculate.c...
+compiling infrared_led.c...
+compiling motor.c...
+compiling follow_line.c...
+compiling fsm.c...
+..\..\application\fsm.h(33): warning:  #1295-D: Deprecated declaration fsm_init - give arg types
+  void fsm_init();
+..\..\application\fsm.h(34): warning:  #1295-D: Deprecated declaration fsm_loop - give arg types
+  void fsm_loop();
+..\..\application\fsm.c(3): warning:  #1295-D: Deprecated declaration fsm_set_mode - give arg types
+  static void fsm_set_mode();
+..\..\application\fsm.c(4): warning:  #1295-D: Deprecated declaration fsm_set_speed - give arg types
+  static void fsm_set_speed();
+..\..\application\fsm.c(5): warning:  #1295-D: Deprecated declaration fsm_data_loop - give arg types
+  static void fsm_data_loop();
+..\..\application\fsm.c(7): warning:  #1295-D: Deprecated declaration fsm_init - give arg types
+  void fsm_init();
+..\..\application\fsm.c(8): warning:  #1295-D: Deprecated declaration fsm_loop - give arg types
+  void fsm_loop();
+..\..\application\fsm.c(10): warning:  #1-D: last line of file ends without a newline
+  car_t car;
+..\..\application\fsm.c(3): warning:  #177-D: function "fsm_set_mode"  was declared but never referenced
+  static void fsm_set_mode();
+..\..\application\fsm.c(4): warning:  #177-D: function "fsm_set_speed"  was declared but never referenced
+  static void fsm_set_speed();
+..\..\application\fsm.c(5): warning:  #177-D: function "fsm_data_loop"  was declared but never referenced
+  static void fsm_data_loop();
+..\..\application\fsm.c: 11 warnings, 0 errors
+linking...
+.\Build\Car1.axf: Error: L6218E: Undefined symbol key_delay (referred from main.o).
+Not enough information to list image symbols.
+Not enough information to list load addresses in the image map.
+Finished: 2 information, 0 warning and 1 error messages.
+".\Build\Car1.axf" - 1 Error(s), 15 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+Package Vendor: TexasInstruments
+                http://software-dl.ti.com/msp430/msp430_public_sw/mcu/msp430/mspkeil/latest/exports/TexasInstruments.MSP432.1.0.0.pack
+                TexasInstruments.MSP432.1.0.0
+                Device Family Pack for Texas Instruments MSP432 Family
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Car1
+  A:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  A:\Keil_v5\Packs\TexasInstruments\MSP432\1.0.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+Target not created.
+Build Time Elapsed:  00:00:18
+</pre>
+</body>
+</html>

@@ -1,0 +1,7 @@
+--target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -masm=auto -c
+-gdwarf-3
+-I./RTE/_Car1
+-IA:/Keil_v5/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include
+-IA:/Keil_v5/Packs/TexasInstruments/MSP432/1.0.0/Device/Include
+-Wa,armasm,--pd,"__UVISION_VERSION SETA 533" -Wa,armasm,--pd,"_RTE_ SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1" -Wa,armasm,--pd,"__MSP432P401R__ SETA 1"
+-o ./build/startup_msp432p401r_uvision.o "startup_msp432p401r_uvision.s"
