@@ -18,6 +18,7 @@
 #include "key.h"
 #include "fsm.h"
 #include "follow_line.h"
+#include "oled.h"
 
 uint8_t infrared = 0;
 int32_t set_speed[2] = {1000,1000};
@@ -31,11 +32,14 @@ int main(void)
 		KEY_Init(1);//开中断
 		LED_Init();
 		fsm_init();
+		OLED_Init();
+		OLED_ShowString(0, 0,"hello",8);
+	
     /*停止填充初始化代码*/
 		
     printf("Hello,MSP432!\r\n");
     MAP_Interrupt_enableMaster(); // 开启总中断
-		motor_set_speed(set_speed);
+//		motor_set_speed(set_speed);
     while (1)
     {
 			fsm_loop();
@@ -69,22 +73,16 @@ void PORT1_IRQHandler(void)
     if (status & GPIO_PIN1) //对应P1.1
     {
 			press_count++;
-        if (KEY1 == 0)
-        {
-            /*开始填充用户代码*/
-						car.mode = press_count%6;
-						LED_Show_Staus(car.mode);
-            /*结束填充用户代码*/
-        }
+			/*开始填充用户代码*/
+			car.mode = (mode_e)(press_count%6);
+			LED_Show_Staus(car.mode);
     }
     if (status & GPIO_PIN4) //对应P1.4
     {
-        if (KEY2 == 0)
-        {
-            /*开始填充用户代码*/
-						press_count = 0;
-						LED_Show_Staus(car.mode);
-            /*结束填充用户代码*/
-        }
+			/*开始填充用户代码*/
+			press_count = 0;
+			car.mode = (mode_e)(press_count%6);
+			LED_Show_Staus(car.mode);
+			/*结束填充用户代码*/
     }
 }

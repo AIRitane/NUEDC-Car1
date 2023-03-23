@@ -43,3 +43,4 @@
 .\build\motor.o: ..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/sysctl.h
 .\build\motor.o: ..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/flash.h
 .\build\motor.o: A:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+.\build\motor.o: ..\..\sys\inc\delay.h

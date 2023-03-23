@@ -234,6 +234,73 @@ const motor_t* get_motor_info(void)
 	return &motor;
 }
 
+#include "delay.h"
+void car_stop(void)
+{
+	int32_t speed[2] = {0};
+	motor_set_speed(speed);
+	delay_ms(10);
+}
+
+void car_turn_r_90_degree(void)
+{
+	int32_t turns = motor.abs_turns[0];
+	int32_t speed[2] = {-600,600};
+	car_stop();
+	while((motor.abs_turns[0] - turns)<140)
+	{
+		motor_set_speed(speed);
+		delay_ms(1);
+	}
+	speed[0]=0;
+	speed[1]=0;
+	motor_set_speed(speed);
+}
+
+void car_turn_l_90_degree(void)
+{
+	int32_t turns = motor.abs_turns[0];
+	int32_t speed[2] = {600,-600};
+	car_stop();
+	while((motor.abs_turns[0] - turns)<120)
+	{
+		motor_set_speed(speed);
+		delay_ms(1);
+	}
+	speed[0]=0;
+	speed[1]=0;
+	motor_set_speed(speed);
+}
+
+void car_go_straight(void)
+{
+	int32_t turns = motor.abs_turns[0];
+	int32_t speed[2] = {700,700};
+	car_stop();
+	while((motor.abs_turns[0] - turns)<40)
+	{
+		motor_set_speed(speed);
+		delay_ms(1);
+	}
+	speed[0]=0;
+	speed[1]=0;
+	motor_set_speed(speed);
+}
+
+void car_back_straight(void)
+{
+	int32_t turns = motor.abs_turns[0];
+	int32_t speed[2] = {-700,-700};
+	car_stop();
+	while((motor.abs_turns[0] - turns)<40)
+	{
+		motor_set_speed(speed);
+		delay_ms(1);
+	}
+	speed[0]=0;
+	speed[1]=0;
+	motor_set_speed(speed);
+}
 
 
 

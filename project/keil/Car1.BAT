@@ -21,6 +21,7 @@ SET CPU_CLOCK=0x00B71B00
 "A:\Keil_v5\ARM\ARMCC\Bin\ArmCC" --Via ".\build\motor.__i"
 "A:\Keil_v5\ARM\ARMCC\Bin\ArmCC" --Via ".\build\follow_line.__i"
 "A:\Keil_v5\ARM\ARMCC\Bin\ArmCC" --Via ".\build\fsm.__i"
+"A:\Keil_v5\ARM\ARMCC\Bin\ArmCC" --Via ".\build\labyrinth.__i"
 "A:\Keil_v5\ARM\ARMCC\Bin\ArmCC" --Via ".\build\pid.__i"
 "A:\Keil_v5\ARM\ARMCC\Bin\ArmLink" --Via ".\Build\Car1.lnp"
 "A:\Keil_v5\ARM\ARMCC\Bin\fromelf.exe" ".\Build\Car1.axf" --i32combined --output ".\Build\Car1.hex"

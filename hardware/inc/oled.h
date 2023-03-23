@@ -20,7 +20,7 @@
 //4.SW_SPI	软件IIC
 
 //现在只支持 硬件IIC 和 软件IIC
-#define TRANSFER_METHOD HW_IIC
+#define TRANSFER_METHOD SW_IIC
 
 /*****************************************************************/
 
@@ -30,7 +30,7 @@
 //IIC_1: P6.5  -- SCL;  P6.4  -- SDA
 //IIC_2: P3.7  -- SCL;  P3.6  -- SDA
 //IIC_3: P10.3 -- SCL;  P10.2 -- SDA
-#define USE_HW_IIC IIC_0
+#define USE_HW_IIC IIC_1
 
 #elif (TRANSFER_METHOD == HW_SPI)
 //#define USE_HW_SPI SPI_2
@@ -70,16 +70,16 @@
 #define Get_Bit(val, bitn) (val & (1 << (bitn)))      //获取电平
 
 //OLED SSD1306 I2C SCL P1.7
-#define OLED_SSD1306_SCL_PIN_NUM (BIT7)
-#define OLED_SSD1306_SCL_IO_INIT (Set_Bit(P1DIR, OLED_SSD1306_SCL_PIN_NUM))
-#define OLED_SCL_Set() (Set_Bit(P1OUT, OLED_SSD1306_SCL_PIN_NUM))
-#define OLED_SCL_Clr() (Clr_Bit(P1OUT, OLED_SSD1306_SCL_PIN_NUM))
+#define OLED_SSD1306_SCL_PIN_NUM (BIT5)
+#define OLED_SSD1306_SCL_IO_INIT (Set_Bit(P6DIR, OLED_SSD1306_SCL_PIN_NUM))
+#define OLED_SCL_Set() (Set_Bit(P6OUT, OLED_SSD1306_SCL_PIN_NUM))
+#define OLED_SCL_Clr() (Clr_Bit(P6OUT, OLED_SSD1306_SCL_PIN_NUM))
 
 //OLED SSD1306 I2C SDA   P1.6
-#define OLED_SSD1306_SDA_PIN_NUM (BIT6)
-#define OLED_SSD1306_SDA_IO_INIT (Set_Bit(P1DIR, OLED_SSD1306_SDA_PIN_NUM))
-#define OLED_SDA_Set() (Set_Bit(P1OUT, OLED_SSD1306_SDA_PIN_NUM))
-#define OLED_SDA_Clr() (Clr_Bit(P1OUT, OLED_SSD1306_SDA_PIN_NUM))
+#define OLED_SSD1306_SDA_PIN_NUM (BIT4)
+#define OLED_SSD1306_SDA_IO_INIT (Set_Bit(P6DIR, OLED_SSD1306_SDA_PIN_NUM))
+#define OLED_SDA_Set() (Set_Bit(P6OUT, OLED_SSD1306_SDA_PIN_NUM))
+#define OLED_SDA_Clr() (Clr_Bit(P6OUT, OLED_SSD1306_SDA_PIN_NUM))
 
 #elif (TRANSFER_METHOD == HW_SPI)
 //暂未支持

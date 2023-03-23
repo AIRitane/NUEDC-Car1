@@ -54,3 +54,5 @@
 .\build\main.o: ..\..\application\follow_line.h
 .\build\main.o: ..\..\algorithm\pid.h
 .\build\main.o: ..\..\algorithm\struct_typedef.h
+.\build\main.o: ..\..\application\labyrinth.h
+.\build\main.o: ..\..\hardware\inc\oled.h

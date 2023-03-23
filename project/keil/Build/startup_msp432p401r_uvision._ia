@@ -1,4 +1,4 @@
---cpu Cortex-M4.fp.sp -g --apcs=interwork 
+--cpu Cortex-M4.fp.sp -g --apcs=interwork --pd "__MICROLIB SETA 1"
 -I.\RTE\_Car1
 -IA:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
 -IA:\Keil_v5\Packs\TexasInstruments\MSP432\1.0.0\Device\Include

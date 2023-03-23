@@ -22,7 +22,7 @@ Dialog DLL:      TCM.DLL V1.48.0.0
  
 <h2>Project:</h2>
 C:\Users\Lixin\Desktop\Car1\project\keil\Car1.uvprojx
-Project File Date:  03/22/2023
+Project File Date:  03/23/2023
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'A:\Keil_v5\ARM\ARMCC\Bin'
@@ -31,11 +31,6 @@ Rebuild target 'Car1'
 compiling system_msp432p401r.c...
 assembling startup_msp432p401r_uvision.s...
 compiling main.c...
-..\..\main.c(75): warning:  #188-D: enumerated type mixed with another type
-                                                car.mode = press_count%6;
-..\..\main.c(90): warning:  #1-D: last line of file ends without a newline
-  }
-..\..\main.c: 2 warnings, 0 errors
 compiling adc.c...
 compiling key.c...
 compiling key4x4.c...
@@ -50,27 +45,21 @@ compiling baudrate_calculate.c...
 compiling infrared_led.c...
 compiling motor.c...
 compiling follow_line.c...
-..\..\application\follow_line.c(67): warning:  #1-D: last line of file ends without a newline
-  }
-..\..\application\follow_line.c: 1 warning, 0 errors
 compiling fsm.c...
-..\..\application\fsm.c(3): warning:  #1295-D: Deprecated declaration fsm_set_mode - give arg types
-  static void fsm_set_mode();
-..\..\application\fsm.c(4): warning:  #1295-D: Deprecated declaration fsm_set_speed - give arg types
-  static void fsm_set_speed();
-..\..\application\fsm.c(5): warning:  #1295-D: Deprecated declaration fsm_data_loop - give arg types
-  static void fsm_data_loop();
-..\..\application\fsm.c(3): warning:  #177-D: function "fsm_set_mode"  was declared but never referenced
-  static void fsm_set_mode();
-..\..\application\fsm.c(5): warning:  #177-D: function "fsm_data_loop"  was declared but never referenced
-  static void fsm_data_loop();
-..\..\application\fsm.c: 5 warnings, 0 errors
+compiling labyrinth.c...
+..\..\application\labyrinth.c(98): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+                labyrinth.wheel_speed[0] = -GO_SPEED*Scale - labyrinth.wd*0.5;
+..\..\application\labyrinth.c(99): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+                labyrinth.wheel_speed[1] = -(-GO_SPEED*Scale + labyrinth.wd*0.5);
+..\..\application\labyrinth.c(53): warning:  #177-D: variable "buffer"  was declared but never referenced
+        char buffer[100] = {0};
+..\..\application\labyrinth.c: 3 warnings, 0 errors
 compiling pid.c...
 linking...
-Program Size: Code=8628 RO-data=512 RW-data=72 ZI-data=840  
+Program Size: Code=10420 RO-data=2860 RW-data=100 ZI-data=932  
 FromELF: creating hex file...
 After Build - User command #1: fromelf --bin --output .\Build\my_project_ROM.bin .\Build\Car1.axf
-".\Build\Car1.axf" - 0 Error(s), 8 Warning(s).
+".\Build\Car1.axf" - 0 Error(s), 3 Warning(s).
 
 <h2>Software Packages used:</h2>
 

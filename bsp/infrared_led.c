@@ -2,7 +2,7 @@
 #include "stdint.h"
 #include "delay.h"
 
-#define INF_DEBUG_TIME 500
+#define INF_DEBUG_TIME 1200
 
 
 /**

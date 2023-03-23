@@ -1,9 +1,9 @@
-#ifndef __FOLLOW_LINE_H
-#define __FOLLOW_LINE_H
+#ifndef __LABYRINTH_H
+#define __LABYRINTH_H
 
 #include <stdint.h>
-#include "pid.h"
 #include "motor.h"
+#include "pid.h"
 
 typedef struct
 {
@@ -18,11 +18,10 @@ typedef struct
 	float wheel_pwm[2];
 	const motor_t *motor_info;
 	pid_type_def pwm_pid[2];
-}follow_line_t;
+}labyrinth_t;
 
-
-void follow_line_loop(void);
-void follow_line_init(void);
-const follow_line_t* get_follow_line_info(void);
+const labyrinth_t* get_labyrinth_info(void);
+void labyrinth_loop(void);
+void labyrinth_init(void);
 
 #endif
