@@ -2,8 +2,6 @@
 #include "motor.h"
 #include "infrared_led.h"
 
-
-#define FOLLOW_SPEED	1
 #define GO_SPEED			20
 
 follow_line_t follow_line;
@@ -35,7 +33,7 @@ static void set_follow_line_wd(void)
 	follow_line.infra_num = follow_line.l_infra_num+follow_line.r_infra_num;
 	
 	follow_line.l_infra = infrared>>4;
-	follow_line.r_infra = ((infrared<<3)&0x0f)|((infrared<<1)&0x08)|((infrared>>3)&0x01)|((infrared>>1)&0x02);
+	follow_line.r_infra = ((infrared<<3)&0x10)|((infrared<<1)&0x08)|((infrared>>3)&0x01)|((infrared>>1)&0x02);
 	
 	follow_line.wd = follow_line.l_infra - follow_line.r_infra;
 }

@@ -52,9 +52,9 @@
           <OutputName>Car1</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
-          <CreateHexFile>1</CreateHexFile>
-          <DebugInformation>1</DebugInformation>
-          <BrowseInformation>1</BrowseInformation>
+          <CreateHexFile>0</CreateHexFile>
+          <DebugInformation>0</DebugInformation>
+          <BrowseInformation>0</BrowseInformation>
           <ListingPath>.\</ListingPath>
           <HexFormatSelection>1</HexFormatSelection>
           <Merge32K>0</Merge32K>
@@ -493,6 +493,11 @@
               <FileType>1</FileType>
               <FilePath>..\..\bsp\motor.c</FilePath>
             </File>
+            <File>
+              <FileName>collide_key.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\bsp\collide_key.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -512,6 +517,11 @@
               <FileName>labyrinth.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\application\labyrinth.c</FilePath>
+            </File>
+            <File>
+              <FileName>auto_cross.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\application\auto_cross.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -17,11 +17,13 @@
 ".\build\baudrate_calculate.o"
 ".\build\infrared_led.o"
 ".\build\motor.o"
+".\build\collide_key.o"
 ".\build\follow_line.o"
 ".\build\fsm.o"
 ".\build\labyrinth.o"
+".\build\auto_cross.o"
 ".\build\pid.o"
---library_type=microlib --strict --scatter ".\Build\Car1.sct"
+--library_type=microlib --nodebug --strict --scatter ".\Build\Car1.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list ".\Car1.map" -o .\Build\Car1.axf

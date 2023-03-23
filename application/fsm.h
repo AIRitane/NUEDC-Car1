@@ -5,6 +5,7 @@
 #include "motor.h"
 #include "follow_line.h"
 #include "labyrinth.h"
+#include "auto_cross.h"
 
 typedef enum
 {
@@ -30,6 +31,7 @@ typedef struct
 	const motor_t *motor_info;
 	const follow_line_t* follow_line_info;
 	const labyrinth_t* labyrinth_info;
+	const auto_cross_t* auto_cross_info;
 	
 	int32_t set_pwm[2];
 }car_t;

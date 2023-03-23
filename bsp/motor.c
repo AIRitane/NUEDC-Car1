@@ -242,12 +242,12 @@ void car_stop(void)
 	delay_ms(10);
 }
 
-void car_turn_r_90_degree(void)
+void car_turn_r_90_degree(uint16_t set_turns)
 {
 	int32_t turns = motor.abs_turns[0];
 	int32_t speed[2] = {-600,600};
 	car_stop();
-	while((motor.abs_turns[0] - turns)<140)
+	while((motor.abs_turns[0] - turns)<set_turns)
 	{
 		motor_set_speed(speed);
 		delay_ms(1);
@@ -257,12 +257,12 @@ void car_turn_r_90_degree(void)
 	motor_set_speed(speed);
 }
 
-void car_turn_l_90_degree(void)
+void car_turn_l_90_degree(uint16_t set_turns)
 {
-	int32_t turns = motor.abs_turns[0];
+	int32_t turns = motor.abs_turns[1];
 	int32_t speed[2] = {600,-600};
 	car_stop();
-	while((motor.abs_turns[0] - turns)<120)
+	while((motor.abs_turns[1] - turns)<set_turns)
 	{
 		motor_set_speed(speed);
 		delay_ms(1);
@@ -272,12 +272,12 @@ void car_turn_l_90_degree(void)
 	motor_set_speed(speed);
 }
 
-void car_go_straight(void)
+void car_go_straight(uint16_t set_turns)
 {
 	int32_t turns = motor.abs_turns[0];
 	int32_t speed[2] = {700,700};
 	car_stop();
-	while((motor.abs_turns[0] - turns)<40)
+	while((motor.abs_turns[0] - turns)<set_turns)
 	{
 		motor_set_speed(speed);
 		delay_ms(1);
@@ -287,12 +287,12 @@ void car_go_straight(void)
 	motor_set_speed(speed);
 }
 
-void car_back_straight(void)
+void car_back_straight(uint16_t set_turns)
 {
 	int32_t turns = motor.abs_turns[0];
 	int32_t speed[2] = {-700,-700};
 	car_stop();
-	while((motor.abs_turns[0] - turns)<40)
+	while((motor.abs_turns[0] - turns)<set_turns)
 	{
 		motor_set_speed(speed);
 		delay_ms(1);
@@ -302,5 +302,21 @@ void car_back_straight(void)
 	motor_set_speed(speed);
 }
 
-
-
+void car_turn(uint32_t set_turns,int8_t scale)
+{
+	int32_t turns = motor.abs_turns[0];
+	int32_t speed[2] = {600,-600};
+	
+	speed[0] *= scale;
+	speed[1] *= scale;
+	
+	car_stop();
+	while((motor.abs_turns[0] - turns)<set_turns)
+	{
+		motor_set_speed(speed);
+		delay_ms(1);
+	}
+	speed[0]=0;
+	speed[1]=0;
+	motor_set_speed(speed);
+}

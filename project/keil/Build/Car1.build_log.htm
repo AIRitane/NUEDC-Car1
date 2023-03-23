@@ -44,22 +44,29 @@ compiling delay.c...
 compiling baudrate_calculate.c...
 compiling infrared_led.c...
 compiling motor.c...
+compiling collide_key.c...
+..\..\bsp\collide_key.c(105): warning:  #1-D: last line of file ends without a newline
+  }
+..\..\bsp\collide_key.c: 1 warning, 0 errors
 compiling follow_line.c...
 compiling fsm.c...
 compiling labyrinth.c...
-..\..\application\labyrinth.c(98): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+..\..\application\labyrinth.c(97): warning:  #1035-D: single-precision operand implicitly converted to double-precision
                 labyrinth.wheel_speed[0] = -GO_SPEED*Scale - labyrinth.wd*0.5;
-..\..\application\labyrinth.c(99): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+..\..\application\labyrinth.c(98): warning:  #1035-D: single-precision operand implicitly converted to double-precision
                 labyrinth.wheel_speed[1] = -(-GO_SPEED*Scale + labyrinth.wd*0.5);
 ..\..\application\labyrinth.c(53): warning:  #177-D: variable "buffer"  was declared but never referenced
         char buffer[100] = {0};
 ..\..\application\labyrinth.c: 3 warnings, 0 errors
+compiling auto_cross.c...
+..\..\application\auto_cross.c(15): warning:  #177-D: function "get_bit_num"  was declared but never referenced
+  static uint8_t get_bit_num(uint8_t num)
+..\..\application\auto_cross.c: 1 warning, 0 errors
 compiling pid.c...
 linking...
-Program Size: Code=10420 RO-data=2860 RW-data=100 ZI-data=932  
-FromELF: creating hex file...
+Program Size: Code=11668 RO-data=2868 RW-data=132 ZI-data=1108  
 After Build - User command #1: fromelf --bin --output .\Build\my_project_ROM.bin .\Build\Car1.axf
-".\Build\Car1.axf" - 0 Error(s), 3 Warning(s).
+".\Build\Car1.axf" - 0 Error(s), 5 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -82,7 +89,7 @@ Package Vendor: TexasInstruments
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.4.0
-Build Time Elapsed:  00:00:11
+Build Time Elapsed:  00:00:04
 </pre>
 </body>
 </html>

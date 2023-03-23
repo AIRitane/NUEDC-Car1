@@ -15,9 +15,11 @@ typedef struct
 void motor_init(void);
 void motor_set_speed(int32_t set_speed[2]);
 const motor_t* get_motor_info(void);
-void car_turn_r_90_degree(void);
-void car_turn_l_90_degree(void);
-void car_go_straight(void);
-void car_back_straight(void);
+void car_turn_r_90_degree(uint16_t set_turns);
+void car_turn_l_90_degree(uint16_t set_turns);
+void car_go_straight(uint16_t set_turns);
+void car_back_straight(uint16_t set_turns);
 void car_stop(void);
+void car_turn(uint32_t set_turns,int8_t scale);
+
 #endif

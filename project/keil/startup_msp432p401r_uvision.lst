@@ -547,13 +547,13 @@ ARM Macro Assembler    Page 9
   337 0000001C                 END
               00000000 
               00000000 
-Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp.sp --apcs=
-interwork --depend=.\build\startup_msp432p401r_uvision.d -o.\build\startup_msp4
-32p401r_uvision.o -I.\RTE\_Car1 -IA:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\I
-nclude -IA:\Keil_v5\Packs\TexasInstruments\MSP432\1.0.0\Device\Include --predef
-ine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 533" --predefine="_
-RTE_ SETA 1" --predefine="_RTE_ SETA 1" --predefine="__MSP432P401R__ SETA 1" --
-list=.\startup_msp432p401r_uvision.lst startup_msp432p401r_uvision.s
+Command Line: --xref --diag_suppress=9931 --cpu=Cortex-M4.fp.sp --apcs=interwor
+k --depend=.\build\startup_msp432p401r_uvision.d -o.\build\startup_msp432p401r_
+uvision.o -I.\RTE\_Car1 -IA:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include -
+IA:\Keil_v5\Packs\TexasInstruments\MSP432\1.0.0\Device\Include --predefine="__M
+ICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 533" --predefine="_RTE_ SET
+A 1" --predefine="_RTE_ SETA 1" --predefine="__MSP432P401R__ SETA 1" --list=.\s
+tartup_msp432p401r_uvision.lst startup_msp432p401r_uvision.s
 
 
 

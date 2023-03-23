@@ -13,6 +13,7 @@ void fsm_init(void)
 	motor_init();
 	follow_line_init();
 	labyrinth_init();
+	auto_cross_init();
 	
 	//pid³õÊ¼»¯
 	
@@ -21,6 +22,8 @@ void fsm_init(void)
 	car.motor_info = get_motor_info();
 	car.follow_line_info = get_follow_line_info();
 	car.labyrinth_info = get_labyrinth_info();
+	car.auto_cross_info = get_auto_cross_info();
+	
 	car.set_pwm[0] = 0;
 	car.set_pwm[1] = 0;
 }
@@ -44,6 +47,12 @@ void fsm_loop(void)
 		labyrinth_loop();
 		car.set_pwm[0] = car.labyrinth_info->wheel_pwm[0];
 		car.set_pwm[1] = car.labyrinth_info->wheel_pwm[1];
+	}
+	else if(car.mode == AUTOCROSS)
+	{
+		auto_cross_loop();
+		car.set_pwm[0] = car.auto_cross_info->wheel_pwm[0];
+		car.set_pwm[1] = car.auto_cross_info->wheel_pwm[1];
 	}
 	else
 	{

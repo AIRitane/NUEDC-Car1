@@ -41,7 +41,7 @@ static void set_labyrinth_wd(void)
 	labyrinth.infra_num = labyrinth.l_infra_num+labyrinth.r_infra_num;
 	
 	labyrinth.l_infra = infrared>>4;
-	labyrinth.r_infra = ((infrared<<3)&0x0f)|((infrared<<1)&0x08)|((infrared>>3)&0x01)|((infrared>>1)&0x02);
+	labyrinth.r_infra = ((infrared<<3)&0x10)|((infrared<<1)&0x08)|((infrared>>3)&0x01)|((infrared>>1)&0x02);
 	
 	labyrinth.wd = labyrinth.l_infra - labyrinth.r_infra;
 }
@@ -61,33 +61,32 @@ static void set_labyrinth_wheel_speed(void)
 	//十字和T字
 	if(labyrinth.l_infra_num>=3&&labyrinth.r_infra_num>=3)
 	{
-		car_turn_r_90_degree();
+		car_turn_r_90_degree(140);
 	}
 	//-|字路口
 	else if(labyrinth.l_infra_num>=40)
 	{
 		left_flag = 1;
-		car_go_straight();
+		car_go_straight(40);
 	}
 	//无路
 	else if(labyrinth.l_infra_num==0&& labyrinth.r_infra_num==0 && left_flag)
 	{
 		left_flag = 0;
-		car_turn_l_90_degree();
+		car_turn_l_90_degree(140);
 		car_stop();
 	}
 	//|-字路口
 	else if(labyrinth.r_infra_num>=3)
 	{
-		car_turn_r_90_degree();
+		car_turn_r_90_degree(140);
 	}
 	else
 	{
 		//跑飞原地转圈
 		if(labyrinth.infra_num == 0)
 		{
-			//car_back_straight();
-			car_turn_l_90_degree();
+			car_turn_l_90_degree(140);
 			//delay_ms(1000);
 			return;
 		}

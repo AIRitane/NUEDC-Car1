@@ -55,4 +55,5 @@
 .\build\main.o: ..\..\algorithm\pid.h
 .\build\main.o: ..\..\algorithm\struct_typedef.h
 .\build\main.o: ..\..\application\labyrinth.h
+.\build\main.o: ..\..\application\auto_cross.h
 .\build\main.o: ..\..\hardware\inc\oled.h
