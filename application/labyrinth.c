@@ -7,13 +7,13 @@
 
 
 
-#define GO_SPEED			15
+#define GO_SPEED			9
 #define TURN_TIME  		500
 #define TURN_SPEED  		7
 labyrinth_t labyrinth;
 
-float labyrinth_pwm_pid[2][3]={{100,1,0},
-															 {100,1,0},
+float labyrinth_pwm_pid[2][3]={{100,0,0},
+															 {100,0,0},
 															 };
 
 
@@ -32,7 +32,7 @@ static uint8_t get_bit_num(uint8_t num)
 }
 
 //设置跟随差速
-static void set_labyrinth_wd(void)
+static uint8_t set_labyrinth_wd(void)
 {
 	uint8_t infrared = 0;
 	infrared = infrared_sensor_read();
@@ -44,60 +44,66 @@ static void set_labyrinth_wd(void)
 	labyrinth.r_infra = ((infrared<<3)&0x10)|((infrared<<1)&0x08)|((infrared>>3)&0x01)|((infrared>>1)&0x02);
 	
 	labyrinth.wd = labyrinth.l_infra - labyrinth.r_infra;
+	
+	return labyrinth.infra_num;
 }
 
 #include "delay.h"
 //设置轮子速度
 static void set_labyrinth_wheel_speed(void)
 {
-	char buffer[100] = {0};
 	
 	float Scale = 1;
-	static uint8_t left_flag = 0;
-//	
-//	sprintf(buffer,"L = %d R = %d ALL = %d",labyrinth.l_infra_num,labyrinth.r_infra_num,labyrinth.infra_num);
-//	OLED_ShowString(0, 0,(uint8_t*)buffer,8);
-	
+	static int8_t left_flag = 0;
+
 	//十字和T字
+	if(left_flag <= 0) left_flag = 0;
 	if(labyrinth.l_infra_num>=3&&labyrinth.r_infra_num>=3)
 	{
-		car_turn_r_90_degree(140);
+		left_flag--;
+		car_turn_r_90_degree(100);
 	}
 	//-|字路口
-	else if(labyrinth.l_infra_num>=40)
+	else if(labyrinth.l_infra_num>=4)
 	{
-		left_flag = 1;
-		car_go_straight(40);
+		left_flag = 8;
+		car_go_straight(25);
 	}
 	//无路
-	else if(labyrinth.l_infra_num==0&& labyrinth.r_infra_num==0 && left_flag)
+	else if(labyrinth.l_infra_num==0&& labyrinth.r_infra_num==0 && left_flag>=1)
 	{
+		car_turn_l_90_degree(90);
 		left_flag = 0;
-		car_turn_l_90_degree(140);
-		car_stop();
 	}
 	//|-字路口
 	else if(labyrinth.r_infra_num>=3)
 	{
-		car_turn_r_90_degree(140);
+		left_flag--;
+		car_turn_r_90_degree(100);
+		
 	}
 	else
 	{
+		left_flag--;
 		//跑飞原地转圈
 		if(labyrinth.infra_num == 0)
 		{
-			car_turn_l_90_degree(140);
-			//delay_ms(1000);
+			car_turn_l_90_degree(220);
+			labyrinth.wheel_speed[0] = 0;
+			labyrinth.wheel_speed[1] = 0;
 			return;
 		}
-		else if(labyrinth.infra_num>=3 || labyrinth.infra_num <= 5) Scale = 0.4;
-		else if(labyrinth.infra_num<=2) Scale = 1;
+		if(labyrinth.infra_num <=2 && (labyrinth.l_infra_num &0x01 || labyrinth.r_infra_num&0x01)) Scale = 1;
+		else if(labyrinth.infra_num<=4) Scale = 0.9;
+		else if(labyrinth.infra_num>=5 && labyrinth.infra_num <= 6) Scale = 0.7;
 		else Scale = 0.2;
+		if(!(labyrinth.l_infra_num &0x01 || labyrinth.r_infra_num&0x01)) Scale *= 0.85;
 		
 		labyrinth.wheel_speed[0] = -GO_SPEED*Scale - labyrinth.wd*0.5;
 		labyrinth.wheel_speed[1] = -(-GO_SPEED*Scale + labyrinth.wd*0.5);
 		return;
 	}
+
 	labyrinth.wheel_speed[0] = 0;
 	labyrinth.wheel_speed[1] = 0;
 }
@@ -124,11 +130,38 @@ static void set_labyrinth_wheel_pwm(void)
 }
 
 //跟随循环任务
-void labyrinth_loop(void)
+uint8_t labyrinth_loop(uint8_t stop_flag)
 {
-	set_labyrinth_wd();
+	uint8_t ret = 0;
+	ret = set_labyrinth_wd();
+	static uint8_t stop = 0;
+	
+	stop &= stop_flag;
+	if(labyrinth.r_infra_num ==3 && stop!=2)
+		stop=1;
+	else if(stop==1 && (labyrinth.l_infra==0x0e || labyrinth.l_infra==0x0f || labyrinth.l_infra==0x0c || labyrinth.l_infra&0x08 || labyrinth.l_infra_num>=3))
+	{
+			car_turn_l_90_degree(130);
+			stop = 2;
+			labyrinth.wheel_pwm[0] = 0;
+			labyrinth.wheel_pwm[1] = 0;
+			return 128;
+	}
+	else if(stop != 2)
+	{
+		stop = 0;
+	}
+	
+	if(stop == 2)
+	{
+		labyrinth.wheel_pwm[0] = 0;
+		labyrinth.wheel_pwm[1] = 0;
+		return 128;
+	}
+	
 	set_labyrinth_wheel_speed();
 	set_labyrinth_wheel_pwm();
+	return ret;
 }
 
 const labyrinth_t* get_labyrinth_info(void)

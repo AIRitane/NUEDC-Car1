@@ -21,7 +21,7 @@ typedef struct
 }follow_line_t;
 
 
-void follow_line_loop(void);
+uint8_t follow_line_loop(void);
 void follow_line_init(void);
 const follow_line_t* get_follow_line_info(void);
 

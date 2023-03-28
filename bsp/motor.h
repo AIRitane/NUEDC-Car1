@@ -21,5 +21,6 @@ void car_go_straight(uint16_t set_turns);
 void car_back_straight(uint16_t set_turns);
 void car_stop(void);
 void car_turn(uint32_t set_turns,int8_t scale);
+uint32_t get_motor_sec(void);
 
 #endif

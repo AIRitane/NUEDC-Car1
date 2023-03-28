@@ -22,7 +22,7 @@ Dialog DLL:      TCM.DLL V1.48.0.0
  
 <h2>Project:</h2>
 C:\Users\Lixin\Desktop\Car1\project\keil\Car1.uvprojx
-Project File Date:  03/23/2023
+Project File Date:  03/25/2023
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'A:\Keil_v5\ARM\ARMCC\Bin'
@@ -45,28 +45,23 @@ compiling baudrate_calculate.c...
 compiling infrared_led.c...
 compiling motor.c...
 compiling collide_key.c...
-..\..\bsp\collide_key.c(105): warning:  #1-D: last line of file ends without a newline
-  }
-..\..\bsp\collide_key.c: 1 warning, 0 errors
 compiling follow_line.c...
 compiling fsm.c...
 compiling labyrinth.c...
-..\..\application\labyrinth.c(97): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+..\..\application\labyrinth.c(100): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+                if(!(labyrinth.l_infra_num &0x01 || labyrinth.r_infra_num&0x01)) Scale *= 0.85;
+..\..\application\labyrinth.c(102): warning:  #1035-D: single-precision operand implicitly converted to double-precision
                 labyrinth.wheel_speed[0] = -GO_SPEED*Scale - labyrinth.wd*0.5;
-..\..\application\labyrinth.c(98): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+..\..\application\labyrinth.c(103): warning:  #1035-D: single-precision operand implicitly converted to double-precision
                 labyrinth.wheel_speed[1] = -(-GO_SPEED*Scale + labyrinth.wd*0.5);
-..\..\application\labyrinth.c(53): warning:  #177-D: variable "buffer"  was declared but never referenced
-        char buffer[100] = {0};
 ..\..\application\labyrinth.c: 3 warnings, 0 errors
 compiling auto_cross.c...
-..\..\application\auto_cross.c(15): warning:  #177-D: function "get_bit_num"  was declared but never referenced
-  static uint8_t get_bit_num(uint8_t num)
-..\..\application\auto_cross.c: 1 warning, 0 errors
 compiling pid.c...
 linking...
-Program Size: Code=11668 RO-data=2868 RW-data=132 ZI-data=1108  
+Program Size: Code=15582 RO-data=2866 RW-data=156 ZI-data=1404  
+FromELF: creating hex file...
 After Build - User command #1: fromelf --bin --output .\Build\my_project_ROM.bin .\Build\Car1.axf
-".\Build\Car1.axf" - 0 Error(s), 5 Warning(s).
+".\Build\Car1.axf" - 0 Error(s), 3 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -89,7 +84,7 @@ Package Vendor: TexasInstruments
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.4.0
-Build Time Elapsed:  00:00:04
+Build Time Elapsed:  00:00:10
 </pre>
 </body>
 </html>

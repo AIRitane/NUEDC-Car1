@@ -21,7 +21,7 @@ typedef struct
 }labyrinth_t;
 
 const labyrinth_t* get_labyrinth_info(void);
-void labyrinth_loop(void);
+uint8_t labyrinth_loop(uint8_t stop_flag);
 void labyrinth_init(void);
 
 #endif

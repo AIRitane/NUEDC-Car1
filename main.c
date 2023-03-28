@@ -33,21 +33,16 @@ int main(void)
 		LED_Init();
 		fsm_init();
 		OLED_Init();
-		OLED_ShowString(0, 0,"hello",8);
+		//OLED_ShowString(0, 8,"hello",8);
 	
     /*停止填充初始化代码*/
 		
     printf("Hello,MSP432!\r\n");
     MAP_Interrupt_enableMaster(); // 开启总中断
-//		motor_set_speed(set_speed);
     while (1)
     {
 			fsm_loop();
-			
 			delay_ms(1);
-//			set_speed[0] = 0;
-//			set_speed[1] = 0;
-//			motor_set_speed(set_speed);
     }
 }
 

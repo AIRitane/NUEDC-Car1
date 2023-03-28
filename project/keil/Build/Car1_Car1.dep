@@ -1,6 +1,6 @@
 Dependencies for Project 'Car1', Target 'Car1': (DO NOT MODIFY !)
 CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
-F (..\..\system_msp432p401r.c)(0x64191221)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -O0 --apcs=interwork --split_sections -I ..\..\hardware\inc -I ..\..\sys\inc -I ..\..\msp432p4xx_lib -I ..\..\msp432p4xx_lib\CMSIS\Include -I ..\..\bsp -I ..\..\application -I ..\..\algorithm-I.\RTE\_Car1-IA:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IA:\Keil_v5\Packs\TexasInstruments\MSP432\1.0.0\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -D_RTE_ -D__MSP432P401R__ -D__MSP432P401R__ -D__TARGET_FPU_VFP -D__FPU_PRESENT -DARM_MATH_CM4-o .\build\system_msp432p401r.o --depend .\build\system_msp432p401r.d)
+F (..\..\system_msp432p401r.c)(0x64191221)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\..\hardware\inc -I ..\..\sys\inc -I ..\..\msp432p4xx_lib -I ..\..\msp432p4xx_lib\CMSIS\Include -I ..\..\bsp -I ..\..\application -I ..\..\algorithm-I.\RTE\_Car1-IA:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IA:\Keil_v5\Packs\TexasInstruments\MSP432\1.0.0\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -D_RTE_ -D__MSP432P401R__ -D__MSP432P401R__ -D__TARGET_FPU_VFP -D__FPU_PRESENT -DARM_MATH_CM4-o .\build\system_msp432p401r.o --omf_browse .\build\system_msp432p401r.crf --depend .\build\system_msp432p401r.d)
 I (A:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/inc/msp.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/inc/msp432p401r.h)(0x64191221)
@@ -12,8 +12,8 @@ I (..\..\msp432p4xx_lib\CMSIS\Include\cmsis_compiler.h)(0x64191221)
 I (..\..\msp432p4xx_lib\CMSIS\Include\cmsis_armcc.h)(0x64191221)
 I (..\..\msp432p4xx_lib\CMSIS\Include\mpu_armv7.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/inc/system_msp432p401r.h)(0x64191221)
-F (startup_msp432p401r_uvision.s)(0x64191221)(--cpu Cortex-M4.fp.sp --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_Car1-IA:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IA:\Keil_v5\Packs\TexasInstruments\MSP432\1.0.0\Device\Include--pd "__UVISION_VERSION SETA 533" --pd "_RTE_ SETA 1" --pd "_RTE_ SETA 1" --pd "__MSP432P401R__ SETA 1"--list .\startup_msp432p401r_uvision.lst --xref -o .\build\startup_msp432p401r_uvision.o --depend .\build\startup_msp432p401r_uvision.d)
-F (..\..\main.c)(0x641BEC63)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -O0 --apcs=interwork --split_sections -I ..\..\hardware\inc -I ..\..\sys\inc -I ..\..\msp432p4xx_lib -I ..\..\msp432p4xx_lib\CMSIS\Include -I ..\..\bsp -I ..\..\application -I ..\..\algorithm-I.\RTE\_Car1-IA:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IA:\Keil_v5\Packs\TexasInstruments\MSP432\1.0.0\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -D_RTE_ -D__MSP432P401R__ -D__MSP432P401R__ -D__TARGET_FPU_VFP -D__FPU_PRESENT -DARM_MATH_CM4-o .\build\main.o --depend .\build\main.d)
+F (startup_msp432p401r_uvision.s)(0x64191221)(--cpu Cortex-M4.fp.sp -g --apcs=interwork -I.\RTE\_Car1-IA:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IA:\Keil_v5\Packs\TexasInstruments\MSP432\1.0.0\Device\Include--pd "__UVISION_VERSION SETA 533" --pd "_RTE_ SETA 1" --pd "_RTE_ SETA 1" --pd "__MSP432P401R__ SETA 1"--list .\startup_msp432p401r_uvision.lst --xref -o .\build\startup_msp432p401r_uvision.o --depend .\build\startup_msp432p401r_uvision.d)
+F (..\..\main.c)(0x641F94D4)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\..\hardware\inc -I ..\..\sys\inc -I ..\..\msp432p4xx_lib -I ..\..\msp432p4xx_lib\CMSIS\Include -I ..\..\bsp -I ..\..\application -I ..\..\algorithm-I.\RTE\_Car1-IA:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IA:\Keil_v5\Packs\TexasInstruments\MSP432\1.0.0\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -D_RTE_ -D__MSP432P401R__ -D__MSP432P401R__ -D__TARGET_FPU_VFP -D__FPU_PRESENT -DARM_MATH_CM4-o .\build\main.o --omf_browse .\build\main.crf --depend .\build\main.d)
 I (..\..\sys\inc\sysinit.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/driverlib.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/adc14.h)(0x64191221)
@@ -63,18 +63,18 @@ I (..\..\sys\inc\delay.h)(0x64191221)
 I (..\..\hardware\inc\led.h)(0x6419ECA8)
 I (..\..\hardware\inc\tim32.h)(0x64191221)
 I (..\..\bsp\infrared_led.h)(0x641998A3)
-I (..\..\bsp\motor.h)(0x641C3E6D)
+I (..\..\bsp\motor.h)(0x641F24E4)
 I (..\..\hardware\inc\key.h)(0x641AAB47)
 I (..\..\application\fsm.h)(0x641C3B6C)
-I (..\..\application\follow_line.h)(0x641BD0CF)
+I (..\..\application\follow_line.h)(0x641F24E4)
 I (..\..\algorithm\pid.h)(0x641ABF7B)
 I (..\..\algorithm\struct_typedef.h)(0x641ABEF7)
-I (..\..\application\labyrinth.h)(0x641BDFCA)
-I (..\..\application\auto_cross.h)(0x641C3B6C)
-I (..\..\hardware\inc\oled.h)(0x641BF1AE)
+I (..\..\application\labyrinth.h)(0x641D994B)
+I (..\..\application\auto_cross.h)(0x641EC33A)
+I (..\..\hardware\inc\oled.h)(0x641F97AD)
 F (..\..\msp432p4xx_lib\ti\devices\msp432p4xx\driverlib\keil\msp432p4xx_driverlib.lib)(0x64191221)()
 F (..\..\msp432p4xx_lib\CMSIS\DSP_Lib\lib\keil\m4f\arm_cortexM4lf_math.a)(0x64191221)()
-F (..\..\hardware\adc.c)(0x64191221)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -O0 --apcs=interwork --split_sections -I ..\..\hardware\inc -I ..\..\sys\inc -I ..\..\msp432p4xx_lib -I ..\..\msp432p4xx_lib\CMSIS\Include -I ..\..\bsp -I ..\..\application -I ..\..\algorithm-I.\RTE\_Car1-IA:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IA:\Keil_v5\Packs\TexasInstruments\MSP432\1.0.0\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -D_RTE_ -D__MSP432P401R__ -D__MSP432P401R__ -D__TARGET_FPU_VFP -D__FPU_PRESENT -DARM_MATH_CM4-o .\build\adc.o --depend .\build\adc.d)
+F (..\..\hardware\adc.c)(0x64191221)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\..\hardware\inc -I ..\..\sys\inc -I ..\..\msp432p4xx_lib -I ..\..\msp432p4xx_lib\CMSIS\Include -I ..\..\bsp -I ..\..\application -I ..\..\algorithm-I.\RTE\_Car1-IA:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IA:\Keil_v5\Packs\TexasInstruments\MSP432\1.0.0\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -D_RTE_ -D__MSP432P401R__ -D__MSP432P401R__ -D__TARGET_FPU_VFP -D__FPU_PRESENT -DARM_MATH_CM4-o .\build\adc.o --omf_browse .\build\adc.crf --depend .\build\adc.d)
 I (..\..\hardware\inc\adc.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/driverlib.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/adc14.h)(0x64191221)
@@ -120,7 +120,7 @@ I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/sysctl.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/flash.h)(0x64191221)
 I (..\..\sys\inc\usart.h)(0x64191221)
 I (A:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E2EB2)
-F (..\..\hardware\key.c)(0x6419E874)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -O0 --apcs=interwork --split_sections -I ..\..\hardware\inc -I ..\..\sys\inc -I ..\..\msp432p4xx_lib -I ..\..\msp432p4xx_lib\CMSIS\Include -I ..\..\bsp -I ..\..\application -I ..\..\algorithm-I.\RTE\_Car1-IA:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IA:\Keil_v5\Packs\TexasInstruments\MSP432\1.0.0\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -D_RTE_ -D__MSP432P401R__ -D__MSP432P401R__ -D__TARGET_FPU_VFP -D__FPU_PRESENT -DARM_MATH_CM4-o .\build\key.o --depend .\build\key.d)
+F (..\..\hardware\key.c)(0x6419E874)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\..\hardware\inc -I ..\..\sys\inc -I ..\..\msp432p4xx_lib -I ..\..\msp432p4xx_lib\CMSIS\Include -I ..\..\bsp -I ..\..\application -I ..\..\algorithm-I.\RTE\_Car1-IA:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IA:\Keil_v5\Packs\TexasInstruments\MSP432\1.0.0\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -D_RTE_ -D__MSP432P401R__ -D__MSP432P401R__ -D__TARGET_FPU_VFP -D__FPU_PRESENT -DARM_MATH_CM4-o .\build\key.o --omf_browse .\build\key.crf --depend .\build\key.d)
 I (..\..\hardware\inc\key.h)(0x641AAB47)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/driverlib.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/adc14.h)(0x64191221)
@@ -164,7 +164,7 @@ I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/uart.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/wdt_a.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/sysctl.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/flash.h)(0x64191221)
-F (..\..\hardware\key4x4.c)(0x64191221)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -O0 --apcs=interwork --split_sections -I ..\..\hardware\inc -I ..\..\sys\inc -I ..\..\msp432p4xx_lib -I ..\..\msp432p4xx_lib\CMSIS\Include -I ..\..\bsp -I ..\..\application -I ..\..\algorithm-I.\RTE\_Car1-IA:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IA:\Keil_v5\Packs\TexasInstruments\MSP432\1.0.0\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -D_RTE_ -D__MSP432P401R__ -D__MSP432P401R__ -D__TARGET_FPU_VFP -D__FPU_PRESENT -DARM_MATH_CM4-o .\build\key4x4.o --depend .\build\key4x4.d)
+F (..\..\hardware\key4x4.c)(0x64191221)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\..\hardware\inc -I ..\..\sys\inc -I ..\..\msp432p4xx_lib -I ..\..\msp432p4xx_lib\CMSIS\Include -I ..\..\bsp -I ..\..\application -I ..\..\algorithm-I.\RTE\_Car1-IA:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IA:\Keil_v5\Packs\TexasInstruments\MSP432\1.0.0\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -D_RTE_ -D__MSP432P401R__ -D__MSP432P401R__ -D__TARGET_FPU_VFP -D__FPU_PRESENT -DARM_MATH_CM4-o .\build\key4x4.o --omf_browse .\build\key4x4.crf --depend .\build\key4x4.d)
 I (..\..\hardware\inc\key4x4.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/driverlib.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/adc14.h)(0x64191221)
@@ -208,7 +208,7 @@ I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/uart.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/wdt_a.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/sysctl.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/flash.h)(0x64191221)
-F (..\..\hardware\led.c)(0x6419EBF3)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -O0 --apcs=interwork --split_sections -I ..\..\hardware\inc -I ..\..\sys\inc -I ..\..\msp432p4xx_lib -I ..\..\msp432p4xx_lib\CMSIS\Include -I ..\..\bsp -I ..\..\application -I ..\..\algorithm-I.\RTE\_Car1-IA:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IA:\Keil_v5\Packs\TexasInstruments\MSP432\1.0.0\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -D_RTE_ -D__MSP432P401R__ -D__MSP432P401R__ -D__TARGET_FPU_VFP -D__FPU_PRESENT -DARM_MATH_CM4-o .\build\led.o --depend .\build\led.d)
+F (..\..\hardware\led.c)(0x6419EBF3)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\..\hardware\inc -I ..\..\sys\inc -I ..\..\msp432p4xx_lib -I ..\..\msp432p4xx_lib\CMSIS\Include -I ..\..\bsp -I ..\..\application -I ..\..\algorithm-I.\RTE\_Car1-IA:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IA:\Keil_v5\Packs\TexasInstruments\MSP432\1.0.0\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -D_RTE_ -D__MSP432P401R__ -D__MSP432P401R__ -D__TARGET_FPU_VFP -D__FPU_PRESENT -DARM_MATH_CM4-o .\build\led.o --omf_browse .\build\led.crf --depend .\build\led.d)
 I (..\..\hardware\inc\led.h)(0x6419ECA8)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/driverlib.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/adc14.h)(0x64191221)
@@ -252,8 +252,8 @@ I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/uart.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/wdt_a.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/sysctl.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/flash.h)(0x64191221)
-F (..\..\hardware\oled.c)(0x64191221)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -O0 --apcs=interwork --split_sections -I ..\..\hardware\inc -I ..\..\sys\inc -I ..\..\msp432p4xx_lib -I ..\..\msp432p4xx_lib\CMSIS\Include -I ..\..\bsp -I ..\..\application -I ..\..\algorithm-I.\RTE\_Car1-IA:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IA:\Keil_v5\Packs\TexasInstruments\MSP432\1.0.0\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -D_RTE_ -D__MSP432P401R__ -D__MSP432P401R__ -D__TARGET_FPU_VFP -D__FPU_PRESENT -DARM_MATH_CM4-o .\build\oled.o --depend .\build\oled.d)
-I (..\..\hardware\inc\oled.h)(0x641BF1AE)
+F (..\..\hardware\oled.c)(0x641F955C)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\..\hardware\inc -I ..\..\sys\inc -I ..\..\msp432p4xx_lib -I ..\..\msp432p4xx_lib\CMSIS\Include -I ..\..\bsp -I ..\..\application -I ..\..\algorithm-I.\RTE\_Car1-IA:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IA:\Keil_v5\Packs\TexasInstruments\MSP432\1.0.0\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -D_RTE_ -D__MSP432P401R__ -D__MSP432P401R__ -D__TARGET_FPU_VFP -D__FPU_PRESENT -DARM_MATH_CM4-o .\build\oled.o --omf_browse .\build\oled.crf --depend .\build\oled.d)
+I (..\..\hardware\inc\oled.h)(0x641F97AD)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/driverlib.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/adc14.h)(0x64191221)
 I (A:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
@@ -299,7 +299,7 @@ I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/flash.h)(0x64191221)
 I (..\..\hardware\inc\oledfont.h)(0x64191221)
 I (..\..\sys\inc\sysinit.h)(0x64191221)
 I (..\..\sys\inc\delay.h)(0x64191221)
-F (..\..\hardware\tim32.c)(0x64191221)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -O0 --apcs=interwork --split_sections -I ..\..\hardware\inc -I ..\..\sys\inc -I ..\..\msp432p4xx_lib -I ..\..\msp432p4xx_lib\CMSIS\Include -I ..\..\bsp -I ..\..\application -I ..\..\algorithm-I.\RTE\_Car1-IA:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IA:\Keil_v5\Packs\TexasInstruments\MSP432\1.0.0\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -D_RTE_ -D__MSP432P401R__ -D__MSP432P401R__ -D__TARGET_FPU_VFP -D__FPU_PRESENT -DARM_MATH_CM4-o .\build\tim32.o --depend .\build\tim32.d)
+F (..\..\hardware\tim32.c)(0x64191221)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\..\hardware\inc -I ..\..\sys\inc -I ..\..\msp432p4xx_lib -I ..\..\msp432p4xx_lib\CMSIS\Include -I ..\..\bsp -I ..\..\application -I ..\..\algorithm-I.\RTE\_Car1-IA:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IA:\Keil_v5\Packs\TexasInstruments\MSP432\1.0.0\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -D_RTE_ -D__MSP432P401R__ -D__MSP432P401R__ -D__TARGET_FPU_VFP -D__FPU_PRESENT -DARM_MATH_CM4-o .\build\tim32.o --omf_browse .\build\tim32.crf --depend .\build\tim32.d)
 I (..\..\hardware\inc\tim32.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/driverlib.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/adc14.h)(0x64191221)
@@ -343,7 +343,7 @@ I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/uart.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/wdt_a.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/sysctl.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/flash.h)(0x64191221)
-F (..\..\hardware\timA.c)(0x64191221)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -O0 --apcs=interwork --split_sections -I ..\..\hardware\inc -I ..\..\sys\inc -I ..\..\msp432p4xx_lib -I ..\..\msp432p4xx_lib\CMSIS\Include -I ..\..\bsp -I ..\..\application -I ..\..\algorithm-I.\RTE\_Car1-IA:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IA:\Keil_v5\Packs\TexasInstruments\MSP432\1.0.0\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -D_RTE_ -D__MSP432P401R__ -D__MSP432P401R__ -D__TARGET_FPU_VFP -D__FPU_PRESENT -DARM_MATH_CM4-o .\build\tima.o --depend .\build\tima.d)
+F (..\..\hardware\timA.c)(0x64191221)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\..\hardware\inc -I ..\..\sys\inc -I ..\..\msp432p4xx_lib -I ..\..\msp432p4xx_lib\CMSIS\Include -I ..\..\bsp -I ..\..\application -I ..\..\algorithm-I.\RTE\_Car1-IA:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IA:\Keil_v5\Packs\TexasInstruments\MSP432\1.0.0\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -D_RTE_ -D__MSP432P401R__ -D__MSP432P401R__ -D__TARGET_FPU_VFP -D__FPU_PRESENT -DARM_MATH_CM4-o .\build\tima.o --omf_browse .\build\tima.crf --depend .\build\tima.d)
 I (..\..\hardware\inc\timA.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/driverlib.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/adc14.h)(0x64191221)
@@ -387,7 +387,7 @@ I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/uart.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/wdt_a.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/sysctl.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/flash.h)(0x64191221)
-F (..\..\sys\usart.c)(0x64191221)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -O0 --apcs=interwork --split_sections -I ..\..\hardware\inc -I ..\..\sys\inc -I ..\..\msp432p4xx_lib -I ..\..\msp432p4xx_lib\CMSIS\Include -I ..\..\bsp -I ..\..\application -I ..\..\algorithm-I.\RTE\_Car1-IA:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IA:\Keil_v5\Packs\TexasInstruments\MSP432\1.0.0\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -D_RTE_ -D__MSP432P401R__ -D__MSP432P401R__ -D__TARGET_FPU_VFP -D__FPU_PRESENT -DARM_MATH_CM4-o .\build\usart.o --depend .\build\usart.d)
+F (..\..\sys\usart.c)(0x64191221)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\..\hardware\inc -I ..\..\sys\inc -I ..\..\msp432p4xx_lib -I ..\..\msp432p4xx_lib\CMSIS\Include -I ..\..\bsp -I ..\..\application -I ..\..\algorithm-I.\RTE\_Car1-IA:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IA:\Keil_v5\Packs\TexasInstruments\MSP432\1.0.0\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -D_RTE_ -D__MSP432P401R__ -D__MSP432P401R__ -D__TARGET_FPU_VFP -D__FPU_PRESENT -DARM_MATH_CM4-o .\build\usart.o --omf_browse .\build\usart.crf --depend .\build\usart.d)
 I (..\..\sys\inc\usart.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/driverlib.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/adc14.h)(0x64191221)
@@ -433,7 +433,7 @@ I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/sysctl.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/flash.h)(0x64191221)
 I (A:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E2EB2)
 I (..\..\sys\inc\baudrate_calculate.h)(0x64191221)
-F (..\..\sys\sysinit.c)(0x64191221)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -O0 --apcs=interwork --split_sections -I ..\..\hardware\inc -I ..\..\sys\inc -I ..\..\msp432p4xx_lib -I ..\..\msp432p4xx_lib\CMSIS\Include -I ..\..\bsp -I ..\..\application -I ..\..\algorithm-I.\RTE\_Car1-IA:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IA:\Keil_v5\Packs\TexasInstruments\MSP432\1.0.0\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -D_RTE_ -D__MSP432P401R__ -D__MSP432P401R__ -D__TARGET_FPU_VFP -D__FPU_PRESENT -DARM_MATH_CM4-o .\build\sysinit.o --depend .\build\sysinit.d)
+F (..\..\sys\sysinit.c)(0x64191221)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\..\hardware\inc -I ..\..\sys\inc -I ..\..\msp432p4xx_lib -I ..\..\msp432p4xx_lib\CMSIS\Include -I ..\..\bsp -I ..\..\application -I ..\..\algorithm-I.\RTE\_Car1-IA:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IA:\Keil_v5\Packs\TexasInstruments\MSP432\1.0.0\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -D_RTE_ -D__MSP432P401R__ -D__MSP432P401R__ -D__TARGET_FPU_VFP -D__FPU_PRESENT -DARM_MATH_CM4-o .\build\sysinit.o --omf_browse .\build\sysinit.crf --depend .\build\sysinit.d)
 I (..\..\sys\inc\sysinit.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/driverlib.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/adc14.h)(0x64191221)
@@ -477,7 +477,7 @@ I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/uart.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/wdt_a.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/sysctl.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/flash.h)(0x64191221)
-F (..\..\sys\delay.c)(0x64191221)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -O0 --apcs=interwork --split_sections -I ..\..\hardware\inc -I ..\..\sys\inc -I ..\..\msp432p4xx_lib -I ..\..\msp432p4xx_lib\CMSIS\Include -I ..\..\bsp -I ..\..\application -I ..\..\algorithm-I.\RTE\_Car1-IA:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IA:\Keil_v5\Packs\TexasInstruments\MSP432\1.0.0\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -D_RTE_ -D__MSP432P401R__ -D__MSP432P401R__ -D__TARGET_FPU_VFP -D__FPU_PRESENT -DARM_MATH_CM4-o .\build\delay.o --depend .\build\delay.d)
+F (..\..\sys\delay.c)(0x64191221)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\..\hardware\inc -I ..\..\sys\inc -I ..\..\msp432p4xx_lib -I ..\..\msp432p4xx_lib\CMSIS\Include -I ..\..\bsp -I ..\..\application -I ..\..\algorithm-I.\RTE\_Car1-IA:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IA:\Keil_v5\Packs\TexasInstruments\MSP432\1.0.0\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -D_RTE_ -D__MSP432P401R__ -D__MSP432P401R__ -D__TARGET_FPU_VFP -D__FPU_PRESENT -DARM_MATH_CM4-o .\build\delay.o --omf_browse .\build\delay.crf --depend .\build\delay.d)
 I (..\..\sys\inc\delay.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/driverlib.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/adc14.h)(0x64191221)
@@ -521,7 +521,7 @@ I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/uart.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/wdt_a.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/sysctl.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/flash.h)(0x64191221)
-F (..\..\sys\baudrate_calculate.c)(0x64191221)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -O0 --apcs=interwork --split_sections -I ..\..\hardware\inc -I ..\..\sys\inc -I ..\..\msp432p4xx_lib -I ..\..\msp432p4xx_lib\CMSIS\Include -I ..\..\bsp -I ..\..\application -I ..\..\algorithm-I.\RTE\_Car1-IA:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IA:\Keil_v5\Packs\TexasInstruments\MSP432\1.0.0\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -D_RTE_ -D__MSP432P401R__ -D__MSP432P401R__ -D__TARGET_FPU_VFP -D__FPU_PRESENT -DARM_MATH_CM4-o .\build\baudrate_calculate.o --depend .\build\baudrate_calculate.d)
+F (..\..\sys\baudrate_calculate.c)(0x64191221)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\..\hardware\inc -I ..\..\sys\inc -I ..\..\msp432p4xx_lib -I ..\..\msp432p4xx_lib\CMSIS\Include -I ..\..\bsp -I ..\..\application -I ..\..\algorithm-I.\RTE\_Car1-IA:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IA:\Keil_v5\Packs\TexasInstruments\MSP432\1.0.0\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -D_RTE_ -D__MSP432P401R__ -D__MSP432P401R__ -D__TARGET_FPU_VFP -D__FPU_PRESENT -DARM_MATH_CM4-o .\build\baudrate_calculate.o --omf_browse .\build\baudrate_calculate.crf --depend .\build\baudrate_calculate.d)
 I (..\..\sys\inc\baudrate_calculate.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/driverlib.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/adc14.h)(0x64191221)
@@ -565,7 +565,7 @@ I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/uart.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/wdt_a.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/sysctl.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/flash.h)(0x64191221)
-F (..\..\bsp\infrared_led.c)(0x641BF82B)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -O0 --apcs=interwork --split_sections -I ..\..\hardware\inc -I ..\..\sys\inc -I ..\..\msp432p4xx_lib -I ..\..\msp432p4xx_lib\CMSIS\Include -I ..\..\bsp -I ..\..\application -I ..\..\algorithm-I.\RTE\_Car1-IA:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IA:\Keil_v5\Packs\TexasInstruments\MSP432\1.0.0\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -D_RTE_ -D__MSP432P401R__ -D__MSP432P401R__ -D__TARGET_FPU_VFP -D__FPU_PRESENT -DARM_MATH_CM4-o .\build\infrared_led.o --depend .\build\infrared_led.d)
+F (..\..\bsp\infrared_led.c)(0x641F9B19)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\..\hardware\inc -I ..\..\sys\inc -I ..\..\msp432p4xx_lib -I ..\..\msp432p4xx_lib\CMSIS\Include -I ..\..\bsp -I ..\..\application -I ..\..\algorithm-I.\RTE\_Car1-IA:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IA:\Keil_v5\Packs\TexasInstruments\MSP432\1.0.0\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -D_RTE_ -D__MSP432P401R__ -D__MSP432P401R__ -D__TARGET_FPU_VFP -D__FPU_PRESENT -DARM_MATH_CM4-o .\build\infrared_led.o --omf_browse .\build\infrared_led.crf --depend .\build\infrared_led.d)
 I (..\..\bsp\infrared_led.h)(0x641998A3)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/driverlib.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/adc14.h)(0x64191221)
@@ -610,8 +610,8 @@ I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/wdt_a.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/sysctl.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/flash.h)(0x64191221)
 I (..\..\sys\inc\delay.h)(0x64191221)
-F (..\..\bsp\motor.c)(0x641C48A3)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -O0 --apcs=interwork --split_sections -I ..\..\hardware\inc -I ..\..\sys\inc -I ..\..\msp432p4xx_lib -I ..\..\msp432p4xx_lib\CMSIS\Include -I ..\..\bsp -I ..\..\application -I ..\..\algorithm-I.\RTE\_Car1-IA:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IA:\Keil_v5\Packs\TexasInstruments\MSP432\1.0.0\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -D_RTE_ -D__MSP432P401R__ -D__MSP432P401R__ -D__TARGET_FPU_VFP -D__FPU_PRESENT -DARM_MATH_CM4-o .\build\motor.o --depend .\build\motor.d)
-I (..\..\bsp\motor.h)(0x641C3E6D)
+F (..\..\bsp\motor.c)(0x641F1EED)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\..\hardware\inc -I ..\..\sys\inc -I ..\..\msp432p4xx_lib -I ..\..\msp432p4xx_lib\CMSIS\Include -I ..\..\bsp -I ..\..\application -I ..\..\algorithm-I.\RTE\_Car1-IA:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IA:\Keil_v5\Packs\TexasInstruments\MSP432\1.0.0\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -D_RTE_ -D__MSP432P401R__ -D__MSP432P401R__ -D__TARGET_FPU_VFP -D__FPU_PRESENT -DARM_MATH_CM4-o .\build\motor.o --omf_browse .\build\motor.crf --depend .\build\motor.d)
+I (..\..\bsp\motor.h)(0x641F24E4)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/driverlib.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/adc14.h)(0x64191221)
 I (A:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
@@ -656,7 +656,7 @@ I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/sysctl.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/flash.h)(0x64191221)
 I (A:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E8E2EB2)
 I (..\..\sys\inc\delay.h)(0x64191221)
-F (..\..\bsp\collide_key.c)(0x641C4720)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -O0 --apcs=interwork --split_sections -I ..\..\hardware\inc -I ..\..\sys\inc -I ..\..\msp432p4xx_lib -I ..\..\msp432p4xx_lib\CMSIS\Include -I ..\..\bsp -I ..\..\application -I ..\..\algorithm-I.\RTE\_Car1-IA:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IA:\Keil_v5\Packs\TexasInstruments\MSP432\1.0.0\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -D_RTE_ -D__MSP432P401R__ -D__MSP432P401R__ -D__TARGET_FPU_VFP -D__FPU_PRESENT -DARM_MATH_CM4-o .\build\collide_key.o --depend .\build\collide_key.d)
+F (..\..\bsp\collide_key.c)(0x641F2522)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\..\hardware\inc -I ..\..\sys\inc -I ..\..\msp432p4xx_lib -I ..\..\msp432p4xx_lib\CMSIS\Include -I ..\..\bsp -I ..\..\application -I ..\..\algorithm-I.\RTE\_Car1-IA:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IA:\Keil_v5\Packs\TexasInstruments\MSP432\1.0.0\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -D_RTE_ -D__MSP432P401R__ -D__MSP432P401R__ -D__TARGET_FPU_VFP -D__FPU_PRESENT -DARM_MATH_CM4-o .\build\collide_key.o --omf_browse .\build\collide_key.crf --depend .\build\collide_key.d)
 I (..\..\bsp\collide_key.h)(0x641C2281)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/driverlib.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/adc14.h)(0x64191221)
@@ -700,12 +700,12 @@ I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/uart.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/wdt_a.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/sysctl.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/flash.h)(0x64191221)
-F (..\..\application\follow_line.c)(0x641C472B)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -O0 --apcs=interwork --split_sections -I ..\..\hardware\inc -I ..\..\sys\inc -I ..\..\msp432p4xx_lib -I ..\..\msp432p4xx_lib\CMSIS\Include -I ..\..\bsp -I ..\..\application -I ..\..\algorithm-I.\RTE\_Car1-IA:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IA:\Keil_v5\Packs\TexasInstruments\MSP432\1.0.0\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -D_RTE_ -D__MSP432P401R__ -D__MSP432P401R__ -D__TARGET_FPU_VFP -D__FPU_PRESENT -DARM_MATH_CM4-o .\build\follow_line.o --depend .\build\follow_line.d)
-I (..\..\application\follow_line.h)(0x641BD0CF)
+F (..\..\application\follow_line.c)(0x641FA5F8)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\..\hardware\inc -I ..\..\sys\inc -I ..\..\msp432p4xx_lib -I ..\..\msp432p4xx_lib\CMSIS\Include -I ..\..\bsp -I ..\..\application -I ..\..\algorithm-I.\RTE\_Car1-IA:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IA:\Keil_v5\Packs\TexasInstruments\MSP432\1.0.0\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -D_RTE_ -D__MSP432P401R__ -D__MSP432P401R__ -D__TARGET_FPU_VFP -D__FPU_PRESENT -DARM_MATH_CM4-o .\build\follow_line.o --omf_browse .\build\follow_line.crf --depend .\build\follow_line.d)
+I (..\..\application\follow_line.h)(0x641F24E4)
 I (A:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
 I (..\..\algorithm\pid.h)(0x641ABF7B)
 I (..\..\algorithm\struct_typedef.h)(0x641ABEF7)
-I (..\..\bsp\motor.h)(0x641C3E6D)
+I (..\..\bsp\motor.h)(0x641F24E4)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/driverlib.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/adc14.h)(0x64191221)
 I (A:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E2EB2)
@@ -748,10 +748,10 @@ I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/wdt_a.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/sysctl.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/flash.h)(0x64191221)
 I (..\..\bsp\infrared_led.h)(0x641998A3)
-F (..\..\application\fsm.c)(0x641C3B6C)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -O0 --apcs=interwork --split_sections -I ..\..\hardware\inc -I ..\..\sys\inc -I ..\..\msp432p4xx_lib -I ..\..\msp432p4xx_lib\CMSIS\Include -I ..\..\bsp -I ..\..\application -I ..\..\algorithm-I.\RTE\_Car1-IA:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IA:\Keil_v5\Packs\TexasInstruments\MSP432\1.0.0\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -D_RTE_ -D__MSP432P401R__ -D__MSP432P401R__ -D__TARGET_FPU_VFP -D__FPU_PRESENT -DARM_MATH_CM4-o .\build\fsm.o --depend .\build\fsm.d)
+F (..\..\application\fsm.c)(0x641FA7F3)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\..\hardware\inc -I ..\..\sys\inc -I ..\..\msp432p4xx_lib -I ..\..\msp432p4xx_lib\CMSIS\Include -I ..\..\bsp -I ..\..\application -I ..\..\algorithm-I.\RTE\_Car1-IA:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IA:\Keil_v5\Packs\TexasInstruments\MSP432\1.0.0\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -D_RTE_ -D__MSP432P401R__ -D__MSP432P401R__ -D__TARGET_FPU_VFP -D__FPU_PRESENT -DARM_MATH_CM4-o .\build\fsm.o --omf_browse .\build\fsm.crf --depend .\build\fsm.d)
 I (..\..\application\fsm.h)(0x641C3B6C)
 I (A:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
-I (..\..\bsp\motor.h)(0x641C3E6D)
+I (..\..\bsp\motor.h)(0x641F24E4)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/driverlib.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/adc14.h)(0x64191221)
 I (A:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E2EB2)
@@ -793,16 +793,18 @@ I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/uart.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/wdt_a.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/sysctl.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/flash.h)(0x64191221)
-I (..\..\application\follow_line.h)(0x641BD0CF)
+I (..\..\application\follow_line.h)(0x641F24E4)
 I (..\..\algorithm\pid.h)(0x641ABF7B)
 I (..\..\algorithm\struct_typedef.h)(0x641ABEF7)
-I (..\..\application\labyrinth.h)(0x641BDFCA)
-I (..\..\application\auto_cross.h)(0x641C3B6C)
+I (..\..\application\labyrinth.h)(0x641D994B)
+I (..\..\application\auto_cross.h)(0x641EC33A)
+I (A:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E2EB2)
+I (..\..\hardware\inc\oled.h)(0x641F97AD)
 I (..\..\sys\inc\delay.h)(0x64191221)
-F (..\..\application\labyrinth.c)(0x641C3EAC)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -O0 --apcs=interwork --split_sections -I ..\..\hardware\inc -I ..\..\sys\inc -I ..\..\msp432p4xx_lib -I ..\..\msp432p4xx_lib\CMSIS\Include -I ..\..\bsp -I ..\..\application -I ..\..\algorithm-I.\RTE\_Car1-IA:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IA:\Keil_v5\Packs\TexasInstruments\MSP432\1.0.0\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -D_RTE_ -D__MSP432P401R__ -D__MSP432P401R__ -D__TARGET_FPU_VFP -D__FPU_PRESENT -DARM_MATH_CM4-o .\build\labyrinth.o --depend .\build\labyrinth.d)
-I (..\..\application\labyrinth.h)(0x641BDFCA)
+F (..\..\application\labyrinth.c)(0x641FA7F3)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\..\hardware\inc -I ..\..\sys\inc -I ..\..\msp432p4xx_lib -I ..\..\msp432p4xx_lib\CMSIS\Include -I ..\..\bsp -I ..\..\application -I ..\..\algorithm-I.\RTE\_Car1-IA:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IA:\Keil_v5\Packs\TexasInstruments\MSP432\1.0.0\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -D_RTE_ -D__MSP432P401R__ -D__MSP432P401R__ -D__TARGET_FPU_VFP -D__FPU_PRESENT -DARM_MATH_CM4-o .\build\labyrinth.o --omf_browse .\build\labyrinth.crf --depend .\build\labyrinth.d)
+I (..\..\application\labyrinth.h)(0x641D994B)
 I (A:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
-I (..\..\bsp\motor.h)(0x641C3E6D)
+I (..\..\bsp\motor.h)(0x641F24E4)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/driverlib.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/adc14.h)(0x64191221)
 I (A:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E2EB2)
@@ -847,14 +849,14 @@ I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/flash.h)(0x64191221)
 I (..\..\algorithm\pid.h)(0x641ABF7B)
 I (..\..\algorithm\struct_typedef.h)(0x641ABEF7)
 I (..\..\bsp\infrared_led.h)(0x641998A3)
-I (..\..\hardware\inc\oled.h)(0x641BF1AE)
+I (..\..\hardware\inc\oled.h)(0x641F97AD)
 I (A:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E2EB2)
 I (A:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E2EB2)
 I (..\..\sys\inc\delay.h)(0x64191221)
-F (..\..\application\auto_cross.c)(0x641C5309)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -O0 --apcs=interwork --split_sections -I ..\..\hardware\inc -I ..\..\sys\inc -I ..\..\msp432p4xx_lib -I ..\..\msp432p4xx_lib\CMSIS\Include -I ..\..\bsp -I ..\..\application -I ..\..\algorithm-I.\RTE\_Car1-IA:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IA:\Keil_v5\Packs\TexasInstruments\MSP432\1.0.0\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -D_RTE_ -D__MSP432P401R__ -D__MSP432P401R__ -D__TARGET_FPU_VFP -D__FPU_PRESENT -DARM_MATH_CM4-o .\build\auto_cross.o --depend .\build\auto_cross.d)
-I (..\..\application\auto_cross.h)(0x641C3B6C)
+F (..\..\application\auto_cross.c)(0x641F2522)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\..\hardware\inc -I ..\..\sys\inc -I ..\..\msp432p4xx_lib -I ..\..\msp432p4xx_lib\CMSIS\Include -I ..\..\bsp -I ..\..\application -I ..\..\algorithm-I.\RTE\_Car1-IA:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IA:\Keil_v5\Packs\TexasInstruments\MSP432\1.0.0\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -D_RTE_ -D__MSP432P401R__ -D__MSP432P401R__ -D__TARGET_FPU_VFP -D__FPU_PRESENT -DARM_MATH_CM4-o .\build\auto_cross.o --omf_browse .\build\auto_cross.crf --depend .\build\auto_cross.d)
+I (..\..\application\auto_cross.h)(0x641EC33A)
 I (A:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
-I (..\..\bsp\motor.h)(0x641C3E6D)
+I (..\..\bsp\motor.h)(0x641F24E4)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/driverlib.h)(0x64191221)
 I (..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/adc14.h)(0x64191221)
 I (A:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E2EB2)
@@ -900,7 +902,8 @@ I (..\..\algorithm\pid.h)(0x641ABF7B)
 I (..\..\algorithm\struct_typedef.h)(0x641ABEF7)
 I (..\..\bsp\collide_key.h)(0x641C2281)
 I (..\..\sys\inc\delay.h)(0x64191221)
-F (..\..\algorithm\pid.c)(0x641ABF7B)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -O0 --apcs=interwork --split_sections -I ..\..\hardware\inc -I ..\..\sys\inc -I ..\..\msp432p4xx_lib -I ..\..\msp432p4xx_lib\CMSIS\Include -I ..\..\bsp -I ..\..\application -I ..\..\algorithm-I.\RTE\_Car1-IA:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IA:\Keil_v5\Packs\TexasInstruments\MSP432\1.0.0\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -D_RTE_ -D__MSP432P401R__ -D__MSP432P401R__ -D__TARGET_FPU_VFP -D__FPU_PRESENT -DARM_MATH_CM4-o .\build\pid.o --depend .\build\pid.d)
+I (..\..\bsp\infrared_led.h)(0x641998A3)
+F (..\..\algorithm\pid.c)(0x641ABF7B)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\..\hardware\inc -I ..\..\sys\inc -I ..\..\msp432p4xx_lib -I ..\..\msp432p4xx_lib\CMSIS\Include -I ..\..\bsp -I ..\..\application -I ..\..\algorithm-I.\RTE\_Car1-IA:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IA:\Keil_v5\Packs\TexasInstruments\MSP432\1.0.0\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -D_RTE_ -D__MSP432P401R__ -D__MSP432P401R__ -D__TARGET_FPU_VFP -D__FPU_PRESENT -DARM_MATH_CM4-o .\build\pid.o --omf_browse .\build\pid.crf --depend .\build\pid.d)
 I (..\..\algorithm\pid.h)(0x641ABF7B)
 I (..\..\algorithm\struct_typedef.h)(0x641ABEF7)
 I (A:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E2EB2)

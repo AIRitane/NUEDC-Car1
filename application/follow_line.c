@@ -5,8 +5,8 @@
 #define GO_SPEED			20
 
 follow_line_t follow_line;
-float follow_line_pwm_pid[2][3]={{100,1,0},
-																 {100,1,0},
+float follow_line_pwm_pid[2][3]={{100,0,0},
+																 {100,0,0},
 																 };
 
 static uint8_t get_bit_num(uint8_t num)
@@ -24,7 +24,7 @@ static uint8_t get_bit_num(uint8_t num)
 }
 
 //设置跟随差速
-static void set_follow_line_wd(void)
+static uint8_t set_follow_line_wd(void)
 {
 	uint8_t infrared = 0;
 	infrared = infrared_sensor_read();
@@ -36,24 +36,33 @@ static void set_follow_line_wd(void)
 	follow_line.r_infra = ((infrared<<3)&0x10)|((infrared<<1)&0x08)|((infrared>>3)&0x01)|((infrared>>1)&0x02);
 	
 	follow_line.wd = follow_line.l_infra - follow_line.r_infra;
+	
+	return follow_line.infra_num;
 }
 
 //设置轮子速度
 static void set_follow_line_wheel_speed(void)
 {
-	float Scale = 1;
+	float Scale_speed = 1,Scale_wd = 1;
 	
 	//跑飞原地转圈
 	if(follow_line.infra_num == 0)
 	{
-		Scale = -1;
+		Scale_speed = -1;
 	}
-	else if(follow_line.infra_num>=3 || follow_line.infra_num <= 5) Scale = 0.6;
-	else if(follow_line.infra_num<=2) Scale = 1;
-	else Scale = 0.3;
+	else if(follow_line.infra_num <=2 && (follow_line.l_infra_num &0x01 || follow_line.r_infra_num&0x01))
+	{
+		Scale_speed = 0.8;
+		Scale_wd = 2;
+	}
+	else
+	{
+		Scale_speed = 0.6;
+		Scale_wd = 2;
+	}
 	
-	follow_line.wheel_speed[0] = -GO_SPEED*Scale - follow_line.wd*2;
-	follow_line.wheel_speed[1] = -(-GO_SPEED*Scale + follow_line.wd*2);
+	follow_line.wheel_speed[0] = -GO_SPEED*Scale_speed - follow_line.wd*Scale_wd;
+	follow_line.wheel_speed[1] = -(-GO_SPEED*Scale_speed + follow_line.wd*Scale_wd);
 }
 
 //初始化参数
@@ -75,11 +84,13 @@ static void set_follow_line_wheel_pwm(void)
 }
 
 //跟随循环任务
-void follow_line_loop(void)
+uint8_t follow_line_loop(void)
 {
-	set_follow_line_wd();
+	uint8_t ret = 0;
+	ret = set_follow_line_wd();
 	set_follow_line_wheel_speed();
 	set_follow_line_wheel_pwm();
+	return ret;
 }
 
 
