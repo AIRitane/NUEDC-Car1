@@ -123,7 +123,7 @@ void TimA1_PWM_Init(uint16_t ccr0, uint16_t psc)
     TimA1_PWMConfig.timerPeriod = ccr0;                                  //自动重装载值（ARR）
     TimA1_PWMConfig.compareRegister = TIMER_A_CAPTURECOMPARE_REGISTER_1; //通道一 （引脚定义）
     TimA1_PWMConfig.compareOutputMode = TIMER_A_OUTPUTMODE_TOGGLE_SET;   //输出模式
-    TimA1_PWMConfig.dutyCycle = ccr0;                                    //这里是改变占空比的地方 默认100%
+    TimA1_PWMConfig.dutyCycle = ccr0+1;                                    //这里是改变占空比的地方 默认100%
 
     MAP_Timer_A_generatePWM(TIMER_A1_BASE, &TimA1_PWMConfig); /* 初始化比较寄存器以产生 PWM1 */
 }

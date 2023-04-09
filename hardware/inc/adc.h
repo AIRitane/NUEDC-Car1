@@ -19,5 +19,6 @@
 #define ADC_TRIGGER_TA3_C1 ADC_TRIGGER_SOURCE7
 
 void ADC_Config(void);
+const uint16_t *get_adc14_vaule(void);
 
 #endif

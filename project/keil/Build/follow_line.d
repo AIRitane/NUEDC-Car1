@@ -45,4 +45,4 @@
 .\build\follow_line.o: ..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/wdt_a.h
 .\build\follow_line.o: ..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/sysctl.h
 .\build\follow_line.o: ..\..\msp432p4xx_lib\ti/devices/msp432p4xx/driverlib/flash.h
-.\build\follow_line.o: ..\..\bsp\infrared_led.h
+.\build\follow_line.o: ..\..\hardware\inc\adc.h

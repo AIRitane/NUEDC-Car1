@@ -1,4 +1,8 @@
 #include "fsm.h"
+#include <stdio.h>
+#include "oled.h"
+#include "bsp_key.h"
+
 //static void fsm_set_mode();
 static void fsm_set_speed(void);
 //static void fsm_data_loop();
@@ -10,61 +14,60 @@ car_t car;
 
 void fsm_init(void)
 {
+	key_init();
 	motor_init();
 	follow_line_init();
-	labyrinth_init();
-	auto_cross_init();
 	
 	//pid³õÊ¼»¯
 	
-	car.mode = NOMODE;
+	car.mode = FOLLOW_LINE;
 	car.motor_status = NOFORCE;
 	car.motor_info = get_motor_info();
 	car.follow_line_info = get_follow_line_info();
-	car.labyrinth_info = get_labyrinth_info();
-	car.auto_cross_info = get_auto_cross_info();
 	
 	car.set_pwm[0] = 0;
 	car.set_pwm[1] = 0;
 }
 
-#include "delay.h"
 void fsm_loop(void)
 {
-	if(car.mode == NOMODE)
+	key_loop();
+	if(get_task_status() == NONE_TASK)
 	{
 		car.set_pwm[0] = 0;
 		car.set_pwm[1] = 0;
 	}
-	else if(car.mode == FOLLOW_LINE)
+	else if(get_task_status() == TASK1)
 	{
-		follow_line_loop();
-		car.set_pwm[0] = car.follow_line_info->wheel_pwm[0];
-		car.set_pwm[1] = car.follow_line_info->wheel_pwm[1];
+		if(car.mode == FOLLOW_LINE)
+		{
+			follow_line_loop();
+			car.set_pwm[0] = car.follow_line_info->wheel_pwm[0];
+			car.set_pwm[1] = car.follow_line_info->wheel_pwm[1];
+			if(car.follow_line_info->adc14_vaule[0]*3.3/16384 <=1.4 && car.follow_line_info->adc14_vaule[1]*3.3/16384 <=1.4)
+			{
+				car.mode = NOMODE;
+				car.set_pwm[0] = 0;
+				car.set_pwm[1] = 0;
+			}
+		}
 	}
-	else if(car.mode == LABYRINTH)
+	else if(get_task_status() == TASK2)
 	{
-		labyrinth_loop();
-		car.set_pwm[0] = car.labyrinth_info->wheel_pwm[0];
-		car.set_pwm[1] = car.labyrinth_info->wheel_pwm[1];
+		if(car.mode == FOLLOW_LINE)
+		{
+			follow_line_loop();
+			
+			car.set_pwm[0] = car.follow_line_info->wheel_pwm[0];
+			car.set_pwm[1] = car.follow_line_info->wheel_pwm[1];
+		}
 	}
-	else if(car.mode == AUTOCROSS)
-	{
-		auto_cross_loop();
-		car.set_pwm[0] = car.auto_cross_info->wheel_pwm[0];
-		car.set_pwm[1] = car.auto_cross_info->wheel_pwm[1];
-	}
-	else
-	{
-		car.set_pwm[0] = 0;
-		car.set_pwm[1] = 0;
-	}
+	
 	fsm_set_speed();
 }
 
 static void fsm_set_speed(void)
 {
-	
 	motor_set_speed(car.set_pwm);
 }
 

@@ -47,13 +47,10 @@
 .\build\main.o: ..\..\sys\inc\delay.h
 .\build\main.o: ..\..\hardware\inc\led.h
 .\build\main.o: ..\..\hardware\inc\tim32.h
-.\build\main.o: ..\..\bsp\infrared_led.h
+.\build\main.o: ..\..\bsp\spwm.h
+.\build\main.o: ..\..\hardware\inc\adc.h
 .\build\main.o: ..\..\bsp\motor.h
-.\build\main.o: ..\..\hardware\inc\key.h
 .\build\main.o: ..\..\application\fsm.h
 .\build\main.o: ..\..\application\follow_line.h
 .\build\main.o: ..\..\algorithm\pid.h
 .\build\main.o: ..\..\algorithm\struct_typedef.h
-.\build\main.o: ..\..\application\labyrinth.h
-.\build\main.o: ..\..\application\auto_cross.h
-.\build\main.o: ..\..\hardware\inc\oled.h

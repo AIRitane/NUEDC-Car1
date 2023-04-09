@@ -4,17 +4,11 @@
 #include <stdint.h>
 #include "motor.h"
 #include "follow_line.h"
-#include "labyrinth.h"
-#include "auto_cross.h"
 
 typedef enum
 {
 	NOMODE = 0,
 	FOLLOW_LINE,
-	LABYRINTH,
-	AUTOCROSS,
-	ABOVE_3,
-	CHARGE,
 }mode_e;
 
 typedef enum
@@ -30,8 +24,6 @@ typedef struct
 	motor_status_e motor_status;
 	const motor_t *motor_info;
 	const follow_line_t* follow_line_info;
-	const labyrinth_t* labyrinth_info;
-	const auto_cross_t* auto_cross_info;
 	
 	int32_t set_pwm[2];
 }car_t;

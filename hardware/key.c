@@ -32,7 +32,7 @@ void KEY_Init(bool mode) //IO初始化
 }
 
 /* GPIO 中断 */
-__weak void PORT1_IRQHandler(void)
+void PORT1_IRQHandler(void)
 {
     uint32_t status;
 

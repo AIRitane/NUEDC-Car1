@@ -47,3 +47,4 @@
 .\build\auto_cross.o: ..\..\algorithm\struct_typedef.h
 .\build\auto_cross.o: ..\..\bsp\collide_key.h
 .\build\auto_cross.o: ..\..\sys\inc\delay.h
+.\build\auto_cross.o: ..\..\bsp\infrared_led.h

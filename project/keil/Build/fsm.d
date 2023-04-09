@@ -46,6 +46,6 @@
 .\build\fsm.o: ..\..\application\follow_line.h
 .\build\fsm.o: ..\..\algorithm\pid.h
 .\build\fsm.o: ..\..\algorithm\struct_typedef.h
-.\build\fsm.o: ..\..\application\labyrinth.h
-.\build\fsm.o: ..\..\application\auto_cross.h
-.\build\fsm.o: ..\..\sys\inc\delay.h
+.\build\fsm.o: A:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\build\fsm.o: ..\..\hardware\inc\oled.h
+.\build\fsm.o: ..\..\bsp\bsp_key.h

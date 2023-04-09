@@ -2,6 +2,7 @@
 #include "math.h"
 
 motor_t motor;
+uint32_t sec = 0,_sec_num = 0;
 
 #define ABS(x) ((x)>=0?(x):-(x))
 
@@ -12,7 +13,7 @@ motor_t motor;
 #define MOTOR_PERIMETER  (6.8*PI)	//轮子周长
 #define MOTOR_RADIUS			3.4 
 #define CYCLE_TURNS 360			//单位圈数内编码器的脉冲数量
-#define TA2_FREQ	100				//测频法频率
+#define TA2_FREQ	50				//测频法频率
 
 static void coder_init(void);
 
@@ -53,7 +54,7 @@ static void TimA2_Int_Init(void)
     Timer_A_UpModeConfig upConfig;
     upConfig.clockSource = TIMER_A_CLOCKSOURCE_SMCLK;                                      //时钟源
     upConfig.clockSourceDivider = 48;                                                      //时钟分频 范围1-64
-    upConfig.timerPeriod = 1000000/TA2_FREQ;                                                          //自动重装载值（ARR）
+    upConfig.timerPeriod = 1000000/TA2_FREQ;                                               //自动重装载值（ARR）
     upConfig.timerInterruptEnable_TAIE = TIMER_A_TAIE_INTERRUPT_DISABLE;                   //禁用 tim溢出中断
     upConfig.captureCompareInterruptEnable_CCR0_CCIE = TIMER_A_CCIE_CCR0_INTERRUPT_ENABLE; //启用 ccr0更新中断
     upConfig.timerClear = TIMER_A_DO_CLEAR;                                                // Clear value
@@ -71,15 +72,25 @@ void TA2_0_IRQHandler(void)
 	MAP_Timer_A_clearCaptureCompareInterrupt(TIMER_A2_BASE, TIMER_A_CAPTURECOMPARE_REGISTER_0);
 	BITBAND_PERI(TIMER_A_CMSIS(TIMER_A2_BASE)->CCTL[0], TIMER_A_CCTLN_COV_OFS) = 0;
 	
-	motor.speed[0] = (motor.turns[0] - pre_turns[0])*TA2_FREQ*MOTOR_RADIUS/CYCLE_TURNS;
-	motor.speed[1] = (motor.turns[1] - pre_turns[1])*TA2_FREQ*MOTOR_RADIUS/CYCLE_TURNS;
+	motor.speed[0] = (motor.turns[0] - pre_turns[0]);//*TA2_FREQ*MOTOR_RADIUS/CYCLE_TURNS;
+	motor.speed[1] = (motor.turns[1] - pre_turns[1]);//*TA2_FREQ*MOTOR_RADIUS/CYCLE_TURNS;
 	
 	pre_turns[0] = motor.turns[0];
 	pre_turns[1] = motor.turns[1];
 	motor_distance_loop();
+	
+	_sec_num++;
+	if(_sec_num == 100)
+	{
+		_sec_num = 0;
+		sec+=1;
+	}
 }
 
-
+uint32_t get_motor_sec(void)
+{
+	return sec;
+}
 /**
 * @brief 初始化电机相关
 * @param 
